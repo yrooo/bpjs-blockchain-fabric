@@ -1,0 +1,153 @@
+# Lightweight Configuration for Testing (Solo Orderer)
+# This is a simplified version without Raft consensus
+
+Organizations:
+  - &OrdererOrg
+      Name: OrdererOrg
+      ID: OrdererMSP
+      MSPDir: crypto-config/ordererOrganizations/bpjs-network.com/msp
+      Policies:
+        Readers:
+          Type: Signature
+          Rule: "OR('OrdererMSP.member')"
+        Writers:
+          Type: Signature
+          Rule: "OR('OrdererMSP.member')"
+        Admins:
+          Type: Signature
+          Rule: "OR('OrdererMSP.admin')"
+
+  - &BPJS
+      Name: BPJS
+      ID: BPJSMSP
+      MSPDir: crypto-config/peerOrganizations/bpjs.bpjs-network.com/msp
+      Policies:
+        Readers:
+          Type: Signature
+          Rule: "OR('BPJSMSP.admin', 'BPJSMSP.peer', 'BPJSMSP.client')"
+        Writers:
+          Type: Signature
+          Rule: "OR('BPJSMSP.admin', 'BPJSMSP.client')"
+        Admins:
+          Type: Signature
+          Rule: "OR('BPJSMSP.admin')"
+        Endorsement:
+          Type: Signature
+          Rule: "OR('BPJSMSP.peer')"
+      AnchorPeers:
+        - Host: peer0.bpjs.bpjs-network.com
+          Port: 7051
+
+  - &RumahSakit
+      Name: RumahSakit
+      ID: RumahSakitMSP
+      MSPDir: crypto-config/peerOrganizations/rumahsakit.bpjs-network.com/msp
+      Policies:
+        Readers:
+          Type: Signature
+          Rule: "OR('RumahSakitMSP.admin', 'RumahSakitMSP.peer', 'RumahSakitMSP.client')"
+        Writers:
+          Type: Signature
+          Rule: "OR('RumahSakitMSP.admin', 'RumahSakitMSP.client')"
+        Admins:
+          Type: Signature
+          Rule: "OR('RumahSakitMSP.admin')"
+        Endorsement:
+          Type: Signature
+          Rule: "OR('RumahSakitMSP.peer')"
+      AnchorPeers:
+        - Host: peer0.rumahsakit.bpjs-network.com
+          Port: 9051
+
+Capabilities:
+  Channel: &ChannelCapabilities
+    V2_0: true
+  Orderer: &OrdererCapabilities
+    V2_0: true
+  Application: &ApplicationCapabilities
+    V2_0: true
+
+Application: &ApplicationDefaults
+  Organizations:
+  Policies:
+    Readers:
+      Type: ImplicitMeta
+      Rule: "ANY Readers"
+    Writers:
+      Type: ImplicitMeta
+      Rule: "ANY Writers"
+    Admins:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Admins"
+    LifecycleEndorsement:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Endorsement"
+    Endorsement:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Endorsement"
+  Capabilities:
+    <<: *ApplicationCapabilities
+
+Orderer: &OrdererDefaults
+  OrdererType: solo
+  Addresses:
+    - orderer1.bpjs-network.com:7050
+  BatchTimeout: 2s
+  BatchSize:
+    MaxMessageCount: 10
+    AbsoluteMaxBytes: 99 MB
+    PreferredMaxBytes: 512 KB
+  Organizations:
+  Policies:
+    Readers:
+      Type: ImplicitMeta
+      Rule: "ANY Readers"
+    Writers:
+      Type: ImplicitMeta
+      Rule: "ANY Writers"
+    Admins:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Admins"
+    BlockValidation:
+      Type: ImplicitMeta
+      Rule: "ANY Writers"
+
+Channel: &ChannelDefaults
+  Policies:
+    Readers:
+      Type: ImplicitMeta
+      Rule: "ANY Readers"
+    Writers:
+      Type: ImplicitMeta
+      Rule: "ANY Writers"
+    Admins:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Admins"
+  Capabilities:
+    <<: *ChannelCapabilities
+
+Profiles:
+  LightweightOrdererGenesis:
+    <<: *ChannelDefaults
+    Orderer:
+      <<: *OrdererDefaults
+      Organizations:
+        - *OrdererOrg
+      Capabilities:
+        <<: *OrdererCapabilities
+    Consortiums:
+      BPJSConsortium:
+        Organizations:
+          - *BPJS
+          - *RumahSakit
+
+  LightweightChannel:
+    Consortium: BPJSConsortium
+    <<: *ChannelDefaults
+    Application:
+      <<: *ApplicationDefaults
+      Organizations:
+        - *BPJS
+        - *RumahSakit
+      Capabilities:
+        <<: *ApplicationCapabilities

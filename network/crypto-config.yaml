@@ -1,0 +1,41 @@
+# Crypto Configuration for BPJS Blockchain Network
+# This file defines the certificate authority structure
+
+OrdererOrgs:
+  - Name: Orderer
+    Domain: bpjs-network.com
+    EnableNodeOUs: true
+    Specs:
+      - Hostname: orderer1
+      - Hostname: orderer2
+      - Hostname: orderer3
+      - Hostname: orderer4
+      - Hostname: orderer5
+
+PeerOrgs:
+  # BPJS Organization
+  - Name: BPJS
+    Domain: bpjs.bpjs-network.com
+    EnableNodeOUs: true
+    Template:
+      Count: 2
+    Users:
+      Count: 3
+
+  # Rumah Sakit (Hospital) Organization
+  - Name: RumahSakit
+    Domain: rumahsakit.bpjs-network.com
+    EnableNodeOUs: true
+    Template:
+      Count: 2
+    Users:
+      Count: 3
+
+  # Puskesmas (Clinic) Organization
+  - Name: Puskesmas
+    Domain: puskesmas.bpjs-network.com
+    EnableNodeOUs: true
+    Template:
+      Count: 2
+    Users:
+      Count: 3

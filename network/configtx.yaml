@@ -1,0 +1,261 @@
+# Hyperledger Fabric Network Configuration for BPJS Blockchain
+# This file defines the organizations, ordering service, and channel profiles
+
+---
+################################################################################
+#
+#   Organizations
+#
+################################################################################
+Organizations:
+  # Ordering Organization
+  - &OrdererOrg
+      Name: OrdererOrg
+      ID: OrdererMSP
+      MSPDir: crypto-config/ordererOrganizations/bpjs-network.com/msp
+      Policies:
+        Readers:
+          Type: Signature
+          Rule: "OR('OrdererMSP.member')"
+        Writers:
+          Type: Signature
+          Rule: "OR('OrdererMSP.member')"
+        Admins:
+          Type: Signature
+          Rule: "OR('OrdererMSP.admin')"
+
+  # BPJS Organization
+  - &BPJS
+      Name: BPJS
+      ID: BPJSMSP
+      MSPDir: crypto-config/peerOrganizations/bpjs.bpjs-network.com/msp
+      Policies:
+        Readers:
+          Type: Signature
+          Rule: "OR('BPJSMSP.admin', 'BPJSMSP.peer', 'BPJSMSP.client')"
+        Writers:
+          Type: Signature
+          Rule: "OR('BPJSMSP.admin', 'BPJSMSP.client')"
+        Admins:
+          Type: Signature
+          Rule: "OR('BPJSMSP.admin')"
+        Endorsement:
+          Type: Signature
+          Rule: "OR('BPJSMSP.peer')"
+      AnchorPeers:
+        - Host: peer0.bpjs.bpjs-network.com
+          Port: 7051
+
+  # Rumah Sakit (Hospital) Organization
+  - &RumahSakit
+      Name: RumahSakit
+      ID: RumahSakitMSP
+      MSPDir: crypto-config/peerOrganizations/rumahsakit.bpjs-network.com/msp
+      Policies:
+        Readers:
+          Type: Signature
+          Rule: "OR('RumahSakitMSP.admin', 'RumahSakitMSP.peer', 'RumahSakitMSP.client')"
+        Writers:
+          Type: Signature
+          Rule: "OR('RumahSakitMSP.admin', 'RumahSakitMSP.client')"
+        Admins:
+          Type: Signature
+          Rule: "OR('RumahSakitMSP.admin')"
+        Endorsement:
+          Type: Signature
+          Rule: "OR('RumahSakitMSP.peer')"
+      AnchorPeers:
+        - Host: peer0.rumahsakit.bpjs-network.com
+          Port: 9051
+
+  # Puskesmas (Clinic) Organization
+  - &Puskesmas
+      Name: Puskesmas
+      ID: PuskesmasMSP
+      MSPDir: crypto-config/peerOrganizations/puskesmas.bpjs-network.com/msp
+      Policies:
+        Readers:
+          Type: Signature
+          Rule: "OR('PuskesmasMSP.admin', 'PuskesmasMSP.peer', 'PuskesmasMSP.client')"
+        Writers:
+          Type: Signature
+          Rule: "OR('PuskesmasMSP.admin', 'PuskesmasMSP.client')"
+        Admins:
+          Type: Signature
+          Rule: "OR('PuskesmasMSP.admin')"
+        Endorsement:
+          Type: Signature
+          Rule: "OR('PuskesmasMSP.peer')"
+      AnchorPeers:
+        - Host: peer0.puskesmas.bpjs-network.com
+          Port: 11051
+
+################################################################################
+#
+#   CAPABILITIES - Fabric version features
+#
+################################################################################
+Capabilities:
+  Channel: &ChannelCapabilities
+    V2_0: true
+  Orderer: &OrdererCapabilities
+    V2_0: true
+  Application: &ApplicationCapabilities
+    V2_0: true
+
+################################################################################
+#
+#   APPLICATION - Peer endorsement policies
+#
+################################################################################
+Application: &ApplicationDefaults
+  Organizations:
+  Policies:
+    Readers:
+      Type: ImplicitMeta
+      Rule: "ANY Readers"
+    Writers:
+      Type: ImplicitMeta
+      Rule: "ANY Writers"
+    Admins:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Admins"
+    LifecycleEndorsement:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Endorsement"
+    Endorsement:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Endorsement"
+  Capabilities:
+    <<: *ApplicationCapabilities
+
+################################################################################
+#
+#   ORDERER - Raft Consensus Configuration
+#
+################################################################################
+Orderer: &OrdererDefaults
+  OrdererType: etcdraft
+  
+  # Raft Ordering Service Nodes
+  EtcdRaft:
+    Consenters:
+      - Host: orderer1.bpjs-network.com
+        Port: 7050
+        ClientTLSCert: crypto-config/ordererOrganizations/bpjs-network.com/orderers/orderer1.bpjs-network.com/tls/server.crt
+        ServerTLSCert: crypto-config/ordererOrganizations/bpjs-network.com/orderers/orderer1.bpjs-network.com/tls/server.crt
+      - Host: orderer2.bpjs-network.com
+        Port: 7051
+        ClientTLSCert: crypto-config/ordererOrganizations/bpjs-network.com/orderers/orderer2.bpjs-network.com/tls/server.crt
+        ServerTLSCert: crypto-config/ordererOrganizations/bpjs-network.com/orderers/orderer2.bpjs-network.com/tls/server.crt
+      - Host: orderer3.bpjs-network.com
+        Port: 7052
+        ClientTLSCert: crypto-config/ordererOrganizations/bpjs-network.com/orderers/orderer3.bpjs-network.com/tls/server.crt
+        ServerTLSCert: crypto-config/ordererOrganizations/bpjs-network.com/orderers/orderer3.bpjs-network.com/tls/server.crt
+      - Host: orderer4.bpjs-network.com
+        Port: 7053
+        ClientTLSCert: crypto-config/ordererOrganizations/bpjs-network.com/orderers/orderer4.bpjs-network.com/tls/server.crt
+        ServerTLSCert: crypto-config/ordererOrganizations/bpjs-network.com/orderers/orderer4.bpjs-network.com/tls/server.crt
+      - Host: orderer5.bpjs-network.com
+        Port: 7054
+        ClientTLSCert: crypto-config/ordererOrganizations/bpjs-network.com/orderers/orderer5.bpjs-network.com/tls/server.crt
+        ServerTLSCert: crypto-config/ordererOrganizations/bpjs-network.com/orderers/orderer5.bpjs-network.com/tls/server.crt
+    
+    # Raft Performance Tuning
+    Options:
+      TickInterval: 500ms
+      ElectionTick: 10
+      HeartbeatTick: 1
+      MaxInflightBlocks: 5
+      SnapshotIntervalSize: 20971520  # 20MB
+
+  # Block Configuration
+  BatchTimeout: 2s
+  BatchSize:
+    MaxMessageCount: 100
+    AbsoluteMaxBytes: 10485760  # 10MB
+    PreferredMaxBytes: 2097152  # 2MB
+
+  # Organizations in ordering service
+  Organizations:
+  
+  # Orderer Policies
+  Policies:
+    Readers:
+      Type: ImplicitMeta
+      Rule: "ANY Readers"
+    Writers:
+      Type: ImplicitMeta
+      Rule: "ANY Writers"
+    Admins:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Admins"
+    BlockValidation:
+      Type: ImplicitMeta
+      Rule: "ANY Writers"
+
+################################################################################
+#
+#   CHANNEL - Channel defaults
+#
+################################################################################
+Channel: &ChannelDefaults
+  Policies:
+    Readers:
+      Type: ImplicitMeta
+      Rule: "ANY Readers"
+    Writers:
+      Type: ImplicitMeta
+      Rule: "ANY Writers"
+    Admins:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Admins"
+  Capabilities:
+    <<: *ChannelCapabilities
+
+################################################################################
+#
+#   PROFILES - Network and Channel Creation Profiles
+#
+################################################################################
+Profiles:
+  # Genesis Block Profile
+  BPJSOrdererGenesis:
+    <<: *ChannelDefaults
+    Orderer:
+      <<: *OrdererDefaults
+      Organizations:
+        - *OrdererOrg
+      Capabilities:
+        <<: *OrdererCapabilities
+    Consortiums:
+      BPJSConsortium:
+        Organizations:
+          - *BPJS
+          - *RumahSakit
+          - *Puskesmas
+
+  # Main Channel Profile (All Organizations)
+  BPJSMainChannel:
+    Consortium: BPJSConsortium
+    <<: *ChannelDefaults
+    Application:
+      <<: *ApplicationDefaults
+      Organizations:
+        - *BPJS
+        - *RumahSakit
+        - *Puskesmas
+      Capabilities:
+        <<: *ApplicationCapabilities
+
+  # Regional Channel Profile (Example: Java Region)
+  BPJSRegionalChannel:
+    Consortium: BPJSConsortium
+    <<: *ChannelDefaults
+    Application:
+      <<: *ApplicationDefaults
+      Organizations:
+        - *BPJS
+        - *RumahSakit
+      Capabilities:
+        <<: *ApplicationCapabilities
