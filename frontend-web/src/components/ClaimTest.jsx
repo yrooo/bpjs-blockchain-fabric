@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { apiService } from '../services/api'
 
 function ClaimTest({ addLog }) {
   const [loading, setLoading] = useState(false)
@@ -29,25 +30,16 @@ function ClaimTest({ addLog }) {
 
   const submitClaim = async () => {
     setLoading(true)
-    addLog('info', 'Submitting insurance claim...', formData)
+    addLog('info', '🚀 Submitting insurance claim to blockchain...', formData)
     
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      
-      const response = {
-        success: true,
-        claimID: formData.claimID,
-        status: 'submitted',
-        message: 'Claim submitted successfully',
-        transactionID: 'TX' + Date.now(),
-        submitDate: new Date().toISOString(),
-        estimatedPaymentDate: new Date(Date.now() + 7*24*60*60*1000).toISOString().split('T')[0]
-      }
+      const response = await apiService.submitClaim(formData)
       
       setResult(response)
-      addLog('success', 'Claim submitted to blockchain!', response)
+      addLog('success', '✅ Claim submitted to blockchain!', response)
     } catch (error) {
-      addLog('error', 'Failed to submit claim', error.message)
+      addLog('error', '❌ Failed to submit claim: ' + error.message, { error: error.message })
+      setResult({ success: false, error: error.message })
     } finally {
       setLoading(false)
     }
@@ -55,34 +47,40 @@ function ClaimTest({ addLog }) {
 
   const processClaim = async () => {
     setLoading(true)
-    addLog('info', `Processing claim: ${formData.claimID}`)
+    addLog('info', `📝 Processing claim on blockchain: ${formData.claimID}`)
     
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      
-      const approved = Math.random() > 0.3 // 70% approval rate
-      
-      const response = {
-        success: true,
-        claimID: formData.claimID,
-        status: approved ? 'approved' : 'rejected',
-        message: approved ? 'Claim approved' : 'Claim rejected - documentation incomplete',
-        reviewedBy: 'BPJS Reviewer ' + Math.floor(Math.random() * 10),
-        reviewDate: new Date().toISOString(),
-        paymentAmount: approved ? formData.claimAmount : 0,
-        paymentDate: approved ? new Date(Date.now() + 7*24*60*60*1000).toISOString().split('T')[0] : null
-      }
+      // Approve the claim (you can add UI for approval/rejection)
+      const response = await apiService.processClaim(formData.claimID, 'approved', 'Claim approved by BPJS')
       
       setResult(response)
-      addLog(approved ? 'success' : 'warning', approved ? 'Claim approved!' : 'Claim rejected', response)
+      addLog('success', '✅ Claim processed on blockchain!', response)
     } catch (error) {
-      addLog('error', 'Failed to process claim', error.message)
+      addLog('error', '❌ Failed to process claim: ' + error.message, { error: error.message })
+      setResult({ success: false, error: error.message })
     } finally {
       setLoading(false)
     }
   }
 
   const getPatientClaims = async () => {
+    setLoading(true)
+    addLog('info', `🔍 Fetching claims from blockchain for patient: ${formData.patientID}`)
+    
+    try {
+      const response = await apiService.getPatientClaims(formData.patientID)
+      
+      setResult(response)
+      addLog('success', '✅ Patient claims retrieved from blockchain!', response)
+    } catch (error) {
+      addLog('error', '❌ Failed to get patient claims: ' + error.message, { error: error.message })
+      setResult({ success: false, error: error.message })
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const getPatientClaimsOld = async () => {
     setLoading(true)
     addLog('info', `Fetching claims for patient: ${formData.patientID}`)
     

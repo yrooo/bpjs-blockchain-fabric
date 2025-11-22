@@ -32,6 +32,8 @@ docker exec -e CORE_PEER_LOCALMSPID=BPJSMSP \
     -o ${ORDERER}:7050 \
     -C ${CHANNEL_NAME} -n ${CHAINCODE_NAME} \
     -c '{"Args":["IssueCard","CARD001","P001","Budi Santoso","1234567890123456","1990-01-01","Male","Jakarta Selatan","PBI","2024-01-01","2025-01-01"]}' \
+    --peerAddresses ${PEER_BPJS}:7051 \
+    --peerAddresses ${PEER_RS}:9051 \
     --waitForEvent
 
 echo -e "${GREEN}✓ Card issued${NC}"
@@ -63,6 +65,8 @@ docker exec -e CORE_PEER_LOCALMSPID=RumahSakitMSP \
     -o ${ORDERER}:7050 \
     -C ${CHANNEL_NAME} -n ${CHAINCODE_NAME} \
     -c '{"Args":["RecordVisit","VISIT001","CARD001","P001","Budi Santoso","RS001","RS Siloam Jakarta","rumahsakit","2024-01-15","outpatient","Influenza","Paracetamol and rest","Dr. Ahmad","DOC001","Regular checkup"]}' \
+    --peerAddresses ${PEER_BPJS}:7051 \
+    --peerAddresses ${PEER_RS}:9051 \
     --waitForEvent
 
 echo -e "${GREEN}✓ Visit recorded${NC}"
@@ -94,6 +98,8 @@ docker exec -e CORE_PEER_LOCALMSPID=RumahSakitMSP \
     -o ${ORDERER}:7050 \
     -C ${CHANNEL_NAME} -n ${CHAINCODE_NAME} \
     -c '{"Args":["SubmitClaim","CLAIM001","P001","Budi Santoso","CARD001","VISIT001","RS001","RS Siloam Jakarta","rawat-jalan","2024-01-15","Influenza","Consultation and medicine","500000","450000"]}' \
+    --peerAddresses ${PEER_BPJS}:7051 \
+    --peerAddresses ${PEER_RS}:9051 \
     --waitForEvent
 
 echo -e "${GREEN}✓ Claim submitted${NC}"
@@ -110,6 +116,8 @@ docker exec -e CORE_PEER_LOCALMSPID=BPJSMSP \
     -o ${ORDERER}:7050 \
     -C ${CHANNEL_NAME} -n ${CHAINCODE_NAME} \
     -c '{"Args":["ProcessClaim","CLAIM001","approved","All documents verified. Payment scheduled."]}' \
+    --peerAddresses ${PEER_BPJS}:7051 \
+    --peerAddresses ${PEER_RS}:9051 \
     --waitForEvent
 
 echo -e "${GREEN}✓ Claim approved${NC}"
@@ -141,6 +149,8 @@ docker exec -e CORE_PEER_LOCALMSPID=RumahSakitMSP \
     -o ${ORDERER}:7050 \
     -C ${CHANNEL_NAME} -n ${CHAINCODE_NAME} \
     -c '{"Args":["CreateReferral","REF001","P001","Budi Santoso","CARD001","PKM001","Puskesmas Kelapa Gading","RS001","RS Siloam Jakarta","Specialist consultation needed","Complex respiratory condition","Dr. Siti","2024-01-15","2024-02-15","Urgent referral for pulmonologist"]}' \
+    --peerAddresses ${PEER_BPJS}:7051 \
+    --peerAddresses ${PEER_RS}:9051 \
     --waitForEvent
 
 echo -e "${GREEN}✓ Referral created${NC}"
@@ -157,6 +167,8 @@ docker exec -e CORE_PEER_LOCALMSPID=RumahSakitMSP \
     -o ${ORDERER}:7050 \
     -C ${CHANNEL_NAME} -n ${CHAINCODE_NAME} \
     -c '{"Args":["UpdateReferralStatus","REF001","accepted","Dr. Wong","Patient scheduled for consultation tomorrow"]}' \
+    --peerAddresses ${PEER_BPJS}:7051 \
+    --peerAddresses ${PEER_RS}:9051 \
     --waitForEvent
 
 echo -e "${GREEN}✓ Referral accepted${NC}"

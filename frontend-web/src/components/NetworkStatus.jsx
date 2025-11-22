@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { apiService } from '../services/api'
 
 function NetworkStatus({ addLog }) {
   const [status, setStatus] = useState({
@@ -12,24 +13,31 @@ function NetworkStatus({ addLog }) {
 
   const checkNetworkStatus = async () => {
     setLoading(true)
-    addLog('info', 'Checking network status...')
+    addLog('info', '🔍 Checking blockchain network status...')
     
     try {
-      // Simulated network check (replace with actual API call)
-      setTimeout(() => {
-        const newStatus = {
-          apiConnected: true,
-          blockchainRunning: true,
-          peers: 6,
-          orderers: 5,
-          channels: 1
-        }
-        setStatus(newStatus)
-        addLog('success', 'Network status retrieved successfully', newStatus)
-        setLoading(false)
-      }, 1500)
+      const response = await apiService.getNetworkStatus()
+      
+      const newStatus = {
+        apiConnected: response.apiConnected,
+        blockchainRunning: response.blockchainRunning,
+        peers: response.apiConnected ? 2 : 0, // We have 2 peers running
+        orderers: response.apiConnected ? 1 : 0, // 1 orderer running
+        channels: response.apiConnected ? 1 : 0
+      }
+      setStatus(newStatus)
+      addLog('success', '✅ Network status retrieved successfully', newStatus)
+      setLoading(false)
     } catch (error) {
-      addLog('error', 'Failed to check network status', error.message)
+      const newStatus = {
+        apiConnected: false,
+        blockchainRunning: false,
+        peers: 0,
+        orderers: 0,
+        channels: 0
+      }
+      setStatus(newStatus)
+      addLog('error', '❌ Failed to check network status: ' + error.message, { error: error.message })
       setLoading(false)
     }
   }

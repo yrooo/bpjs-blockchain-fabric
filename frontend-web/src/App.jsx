@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import NetworkStatus from './components/NetworkStatus'
+import BlockchainDashboard from './components/BlockchainDashboard'
 import ChaincodeTest from './components/ChaincodeTest'
 import CardTest from './components/CardTest'
 import VisitTest from './components/VisitTest'
@@ -24,6 +25,7 @@ function App() {
 
   const tabs = [
     { id: 'network', label: '🌐 Network Status', icon: '🔗' },
+    { id: 'dashboard', label: '📊 Data Dashboard', icon: '📊' },
     { id: 'card', label: '💳 Card Test', icon: '💳' },
     { id: 'visit', label: '🏥 Visit Test', icon: '🏥' },
     { id: 'claim', label: '💰 Claim Test', icon: '💰' },
@@ -53,6 +55,7 @@ function App() {
 
       <main className="app-content">
         {activeTab === 'network' && <NetworkStatus addLog={addLog} />}
+        {activeTab === 'dashboard' && <BlockchainDashboard addLog={addLog} />}
         {activeTab === 'card' && <CardTest addLog={addLog} />}
         {activeTab === 'visit' && <VisitTest addLog={addLog} />}
         {activeTab === 'claim' && <ClaimTest addLog={addLog} />}

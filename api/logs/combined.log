@@ -1,0 +1,357 @@
+2025-11-22T07:33:03.882Z [BlockchainService] [32minfo[39m: 🔍 Checking blockchain connection...
+2025-11-22T07:33:03.873Z [Fabric] [32minfo[39m: 🚀 Connecting to Hyperledger Fabric network...
+2025-11-22T07:33:03.859Z [Main] [32minfo[39m: Connecting to Hyperledger Fabric network...
+2025-11-22T07:33:03.874Z [Fabric] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T07:33:03.875Z [Fabric] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T07:33:03.876Z [Fabric] [32minfo[39m: 🐳 CLI Container: cli
+2025-11-22T07:33:06.390Z [BlockchainService] [32minfo[39m: ✅ Blockchain connection successful
+2025-11-22T07:33:06.393Z [Fabric] [32minfo[39m: ✅ Successfully connected to blockchain network
+2025-11-22T07:33:06.397Z [Main] [32minfo[39m: ✅ Connected to Fabric network
+2025-11-22T07:33:06.391Z [BlockchainService] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T07:33:06.391Z [BlockchainService] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T07:33:06.396Z [Fabric] [32minfo[39m: 🔗 Connection mode: Docker exec (via CLI container)
+2025-11-22T07:33:06.416Z [Main] [32minfo[39m: 🚀 API Server running on http://localhost:3001
+2025-11-22T07:33:06.416Z [Main] [32minfo[39m: 📊 Health check: http://localhost:3001/health
+2025-11-22T07:33:31.053Z [Main] [32minfo[39m: GET /health
+2025-11-22T07:34:00.505Z [Main] [32minfo[39m: GET /favicon.ico
+2025-11-22T07:35:11.820Z [Main] [32minfo[39m: GET /cards
+2025-11-22T07:35:27.870Z [Main] [32minfo[39m: GET /api/cards
+2025-11-22T07:35:37.315Z [Main] [32minfo[39m: GET /api/visits
+2025-11-22T07:36:39.204Z [BlockchainService] [32minfo[39m: 🔍 Checking blockchain connection...
+2025-11-22T07:36:39.191Z [Fabric] [32minfo[39m: 🚀 Connecting to Hyperledger Fabric network...
+2025-11-22T07:36:39.183Z [Main] [32minfo[39m: Connecting to Hyperledger Fabric network...
+2025-11-22T07:36:39.193Z [Fabric] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T07:36:39.194Z [Fabric] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T07:36:39.202Z [Fabric] [32minfo[39m: 🐳 CLI Container: cli
+2025-11-22T07:36:41.007Z [BlockchainService] [32minfo[39m: ✅ Blockchain connection successful
+2025-11-22T07:36:41.011Z [Fabric] [32minfo[39m: ✅ Successfully connected to blockchain network
+2025-11-22T07:36:41.015Z [Main] [32minfo[39m: ✅ Connected to Fabric network
+2025-11-22T07:36:41.009Z [BlockchainService] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T07:36:41.010Z [BlockchainService] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T07:36:41.012Z [Fabric] [32minfo[39m: 🔗 Connection mode: Docker exec (via CLI container)
+2025-11-22T07:36:41.034Z [Main] [32minfo[39m: 🚀 API Server running on http://localhost:3001
+2025-11-22T07:36:41.037Z [Main] [32minfo[39m: 📊 Health check: http://localhost:3001/health
+2025-11-22T07:37:01.328Z [Main] [32minfo[39m: GET /api/visits
+2025-11-22T10:09:58.616Z [BlockchainService] [32minfo[39m: 🔍 Checking blockchain connection...
+2025-11-22T10:09:58.599Z [Fabric] [32minfo[39m: 🚀 Connecting to Hyperledger Fabric network...
+2025-11-22T10:09:58.588Z [Main] [32minfo[39m: Connecting to Hyperledger Fabric network...
+2025-11-22T10:09:58.602Z [Fabric] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T10:09:58.608Z [Fabric] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T10:09:58.613Z [Fabric] [32minfo[39m: 🐳 CLI Container: cli
+2025-11-22T10:10:00.208Z [BlockchainService] [32minfo[39m: ✅ Blockchain connection successful
+2025-11-22T10:10:00.609Z [Fabric] [32minfo[39m: ✅ Successfully connected to blockchain network
+2025-11-22T10:10:00.875Z [Main] [32minfo[39m: ✅ Connected to Fabric network
+2025-11-22T10:10:00.213Z [BlockchainService] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T10:10:00.255Z [BlockchainService] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T10:10:00.869Z [Fabric] [32minfo[39m: 🔗 Connection mode: Docker exec (via CLI container)
+2025-11-22T10:10:00.895Z [Main] [32minfo[39m: 🚀 API Server running on http://localhost:3001
+2025-11-22T10:10:00.899Z [Main] [32minfo[39m: 📊 Health check: http://localhost:3001/health
+2025-11-22T10:12:38.441Z [Main] [32minfo[39m: GET /health
+2025-11-22T10:12:38.505Z [Main] [32minfo[39m: GET /health
+2025-11-22T10:12:59.494Z [Main] [32minfo[39m: GET /health
+2025-11-22T10:13:02.069Z [Main] [32minfo[39m: GET /health
+2025-11-22T10:17:59.856Z [Main] [32minfo[39m: GET /health
+2025-11-22T10:18:00.077Z [Main] [32minfo[39m: GET /health
+2025-11-22T10:18:01.611Z [Main] [32minfo[39m: GET /health
+2025-11-22T10:18:35.558Z [Main] [32minfo[39m: GET /api/visits
+2025-11-22T10:18:41.558Z [Main] [32minfo[39m: GET /api/visits
+2025-11-22T10:24:48.638Z [Main] [32minfo[39m: GET /.well-known/appspecific/com.chrome.devtools.json
+2025-11-22T10:24:50.260Z [Main] [32minfo[39m: GET /api/visits
+2025-11-22T10:24:52.621Z [Main] [32minfo[39m: GET /.well-known/appspecific/com.chrome.devtools.json
+2025-11-22T10:24:58.092Z [Main] [32minfo[39m: GET /api/visits
+2025-11-22T10:25:00.985Z [Main] [32minfo[39m: GET /.well-known/appspecific/com.chrome.devtools.json
+2025-11-22T10:25:05.958Z [Main] [32minfo[39m: GET /health
+2025-11-22T10:25:06.426Z [Main] [32minfo[39m: GET /health
+2025-11-22T10:25:08.545Z [Main] [32minfo[39m: GET /health
+2025-11-22T10:25:55.336Z [BlockchainService] [32minfo[39m: 🔍 Checking blockchain connection...
+2025-11-22T10:25:55.323Z [Fabric] [32minfo[39m: 🚀 Connecting to Hyperledger Fabric network...
+2025-11-22T10:25:55.310Z [Main] [32minfo[39m: Connecting to Hyperledger Fabric network...
+2025-11-22T10:25:55.325Z [Fabric] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T10:25:55.328Z [Fabric] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T10:25:55.330Z [Fabric] [32minfo[39m: 🐳 CLI Container: cli
+2025-11-22T10:25:58.350Z [BlockchainService] [32minfo[39m: ✅ Blockchain connection successful
+2025-11-22T10:25:58.355Z [Fabric] [32minfo[39m: ✅ Successfully connected to blockchain network
+2025-11-22T10:25:58.357Z [Main] [32minfo[39m: ✅ Connected to Fabric network
+2025-11-22T10:25:58.352Z [BlockchainService] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T10:25:58.353Z [BlockchainService] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T10:25:58.356Z [Fabric] [32minfo[39m: 🔗 Connection mode: Docker exec (via CLI container)
+2025-11-22T10:25:58.471Z [Main] [32minfo[39m: 🚀 API Server running on http://localhost:3001
+2025-11-22T10:25:58.501Z [Main] [32minfo[39m: 📊 Health check: http://localhost:3001/health
+2025-11-22T10:26:25.665Z [Main] [32minfo[39m: GET /health
+2025-11-22T10:26:27.246Z [Main] [32minfo[39m: GET /health
+2025-11-22T10:26:33.618Z [Main] [32minfo[39m: POST /api/cards/issue
+2025-11-22T10:26:33.631Z [BlockchainService] [32minfo[39m: Invoking: IssueCard with args: ["CARD1763807190972","P1763807190972","John Doe","1234567890123456","1990-01-01","Male","Jakarta, Indonesia","PBI","2025-11-22","2026-11-22"]
+2025-11-22T10:26:37.320Z [BlockchainService] [31merror[39m: Failed to invoke IssueCard:
+2025-11-22T10:26:37.349Z [CardsRoute] [31merror[39m: Error issuing card: Blockchain transaction failed: Command failed: docker exec cli peer chaincode invoke -o orderer1.bpjs-network.com:7050 -C bpjschannel -n bpjs -c '{"Args":["IssueCard","CARD1763807190972","P1763807190972","John Doe","1234567890123456","1990-01-01","Male","Jakarta, Indonesia","PBI","2025-11-22","2026-11-22"]}' --peerAddresses bpjs-blockchain-fabric-peer0.bpjs.bpjs-network.com-1:7051 --peerAddresses bpjs-blockchain-fabric-peer0.rumahsakit.bpjs-network.com-1:9051 --waitForEvent
+Error: chaincode argument error: invalid character '\'' looking for beginning of value
+Usage:
+  peer chaincode invoke [flags]
+
+Flags:
+  -C, --channelID string               The channel on which this command should be executed
+      --connectionProfile string       Connection profile that provides the necessary connection information for the network. Note: currently only supported for providing peer connection information
+  -c, --ctor string                    Constructor message for the chaincode in JSON format (default "{}")
+  -h, --help                           help for invoke
+  -I, --isInit                         Is this invocation for init (useful for supporting legacy chaincodes in the new lifecycle)
+  -n, --name string                    Name of the chaincode
+      --peerAddresses stringArray      The addresses of the peers to connect to
+      --tlsRootCertFiles stringArray   If TLS is enabled, the paths to the TLS root cert files of the peers to connect to. The order and number of certs specified should match the --peerAddresses flag
+      --waitForEvent                   Whether to wait for the event from each peer's deliver filtered service signifying that the 'invoke' transaction has been committed successfully
+      --waitForEventTimeout duration   Time to wait for the event from each peer's deliver filtered service signifying that the 'invoke' transaction has been committed successfully (default 30s)
+
+Global Flags:
+      --cafile string                       Path to file containing PEM-encoded trusted certificate(s) for the ordering endpoint
+      --certfile string                     Path to file containing PEM-encoded X509 public key to use for mutual TLS communication with the orderer endpoint
+      --clientauth                          Use mutual TLS when communicating with the orderer endpoint
+      --connTimeout duration                Timeout for client to connect (default 3s)
+      --keyfile string                      Path to file containing PEM-encoded private key to use for mutual TLS communication with the orderer endpoint
+  -o, --orderer string                      Ordering service endpoint
+      --ordererTLSHostnameOverride string   The hostname override to use when validating the TLS connection to the orderer
+      --tls                                 Use TLS when communicating with the orderer endpoint
+      --tlsHandshakeTimeShift duration      The amount of time to shift backwards for certificate expiration checks during TLS handshakes with the orderer endpoint
+      --transient string                    Transient map of arguments in JSON encoding
+
+ {"stack":"Error: Blockchain transaction failed: Command failed: docker exec cli peer chaincode invoke -o orderer1.bpjs-network.com:7050 -C bpjschannel -n bpjs -c '{\"Args\":[\"IssueCard\",\"CARD1763807190972\",\"P1763807190972\",\"John Doe\",\"1234567890123456\",\"1990-01-01\",\"Male\",\"Jakarta, Indonesia\",\"PBI\",\"2025-11-22\",\"2026-11-22\"]}' --peerAddresses bpjs-blockchain-fabric-peer0.bpjs.bpjs-network.com-1:7051 --peerAddresses bpjs-blockchain-fabric-peer0.rumahsakit.bpjs-network.com-1:9051 --waitForEvent\nError: chaincode argument error: invalid character '\\'' looking for beginning of value\nUsage:\n  peer chaincode invoke [flags]\n\nFlags:\n  -C, --channelID string               The channel on which this command should be executed\n      --connectionProfile string       Connection profile that provides the necessary connection information for the network. Note: currently only supported for providing peer connection information\n  -c, --ctor string                    Constructor message for the chaincode in JSON format (default \"{}\")\n  -h, --help                           help for invoke\n  -I, --isInit                         Is this invocation for init (useful for supporting legacy chaincodes in the new lifecycle)\n  -n, --name string                    Name of the chaincode\n      --peerAddresses stringArray      The addresses of the peers to connect to\n      --tlsRootCertFiles stringArray   If TLS is enabled, the paths to the TLS root cert files of the peers to connect to. The order and number of certs specified should match the --peerAddresses flag\n      --waitForEvent                   Whether to wait for the event from each peer's deliver filtered service signifying that the 'invoke' transaction has been committed successfully\n      --waitForEventTimeout duration   Time to wait for the event from each peer's deliver filtered service signifying that the 'invoke' transaction has been committed successfully (default 30s)\n\nGlobal Flags:\n      --cafile string                       Path to file containing PEM-encoded trusted certificate(s) for the ordering endpoint\n      --certfile string                     Path to file containing PEM-encoded X509 public key to use for mutual TLS communication with the orderer endpoint\n      --clientauth                          Use mutual TLS when communicating with the orderer endpoint\n      --connTimeout duration                Timeout for client to connect (default 3s)\n      --keyfile string                      Path to file containing PEM-encoded private key to use for mutual TLS communication with the orderer endpoint\n  -o, --orderer string                      Ordering service endpoint\n      --ordererTLSHostnameOverride string   The hostname override to use when validating the TLS connection to the orderer\n      --tls                                 Use TLS when communicating with the orderer endpoint\n      --tlsHandshakeTimeShift duration      The amount of time to shift backwards for certificate expiration checks during TLS handshakes with the orderer endpoint\n      --transient string                    Transient map of arguments in JSON encoding\n\n\n    at BlockchainService.invoke (D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\fabric\\blockchain.service.ts:48:13)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\routes\\cards.ts:31:5"}
+2025-11-22T10:29:24.340Z [BlockchainService] [32minfo[39m: 🔍 Checking blockchain connection...
+2025-11-22T10:29:24.322Z [Fabric] [32minfo[39m: 🚀 Connecting to Hyperledger Fabric network...
+2025-11-22T10:29:24.310Z [Main] [32minfo[39m: Connecting to Hyperledger Fabric network...
+2025-11-22T10:29:24.324Z [Fabric] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T10:29:24.328Z [Fabric] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T10:29:24.336Z [Fabric] [32minfo[39m: 🐳 CLI Container: cli
+2025-11-22T10:29:26.336Z [BlockchainService] [32minfo[39m: ✅ Blockchain connection successful
+2025-11-22T10:29:26.342Z [Fabric] [32minfo[39m: ✅ Successfully connected to blockchain network
+2025-11-22T10:29:26.346Z [Main] [32minfo[39m: ✅ Connected to Fabric network
+2025-11-22T10:29:26.339Z [BlockchainService] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T10:29:26.340Z [BlockchainService] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T10:29:26.343Z [Fabric] [32minfo[39m: 🔗 Connection mode: Docker exec (via CLI container)
+2025-11-22T10:29:26.362Z [Main] [32minfo[39m: 🚀 API Server running on http://localhost:3001
+2025-11-22T10:29:26.377Z [Main] [32minfo[39m: 📊 Health check: http://localhost:3001/health
+2025-11-22T10:34:29.920Z [Main] [32minfo[39m: GET /health
+2025-11-22T10:34:33.357Z [Main] [32minfo[39m: GET /api/cards/verify/CARD1763807671690
+2025-11-22T10:34:33.387Z [BlockchainService] [32minfo[39m: Querying: VerifyCard with args: ["CARD1763807671690"]
+2025-11-22T10:34:50.624Z [BlockchainService] [31merror[39m: Failed to query VerifyCard:
+2025-11-22T10:34:50.649Z [CardsRoute] [31merror[39m: Error verifying card: Blockchain query failed: Command failed: docker exec cli peer chaincode query -C bpjschannel -n bpjs -c "{\"Args\":[\"VerifyCard\",\"CARD1763807671690\"]}"
+Error: endorsement failure during query. response: status:500 message:"card CARD1763807671690 not found" 
+ {"stack":"Error: Blockchain query failed: Command failed: docker exec cli peer chaincode query -C bpjschannel -n bpjs -c \"{\\\"Args\\\":[\\\"VerifyCard\\\",\\\"CARD1763807671690\\\"]}\"\nError: endorsement failure during query. response: status:500 message:\"card CARD1763807671690 not found\" \n\n    at BlockchainService.query (D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\fabric\\blockchain.service.ts:82:13)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\routes\\cards.ts:61:20"}
+2025-11-22T10:35:00.808Z [Main] [32minfo[39m: POST /api/cards/issue
+2025-11-22T10:35:00.817Z [BlockchainService] [32minfo[39m: Invoking: IssueCard with args: ["CARD1763807671690","P1763807671690","John Doe","1234567890123456","1990-01-01","Male","Jakarta, Indonesia","PBI","2025-11-22","2026-11-22"]
+2025-11-22T10:35:17.702Z [BlockchainService] [32minfo[39m: ✅ Transaction successful: IssueCard
+2025-11-22T10:35:36.549Z [Main] [32minfo[39m: GET /api/cards/verify/CARD1763807671690
+2025-11-22T10:35:36.565Z [BlockchainService] [32minfo[39m: Querying: VerifyCard with args: ["CARD1763807671690"]
+2025-11-22T10:35:38.769Z [BlockchainService] [32minfo[39m: ✅ Query successful: VerifyCard
+2025-11-22T10:41:06.655Z [Main] [32minfo[39m: GET /api/cards/verify/CARD1763808065362
+2025-11-22T10:41:06.706Z [BlockchainService] [32minfo[39m: Querying: VerifyCard with args: ["CARD1763808065362"]
+2025-11-22T10:41:20.368Z [BlockchainService] [31merror[39m: Failed to query VerifyCard:
+2025-11-22T10:41:20.372Z [CardsRoute] [31merror[39m: Error verifying card: Blockchain query failed: Command failed: docker exec cli peer chaincode query -C bpjschannel -n bpjs -c "{\"Args\":[\"VerifyCard\",\"CARD1763808065362\"]}"
+Error: endorsement failure during query. response: status:500 message:"card CARD1763808065362 not found" 
+ {"stack":"Error: Blockchain query failed: Command failed: docker exec cli peer chaincode query -C bpjschannel -n bpjs -c \"{\\\"Args\\\":[\\\"VerifyCard\\\",\\\"CARD1763808065362\\\"]}\"\nError: endorsement failure during query. response: status:500 message:\"card CARD1763808065362 not found\" \n\n    at BlockchainService.query (D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\fabric\\blockchain.service.ts:82:13)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\routes\\cards.ts:61:20"}
+2025-11-22T10:41:36.078Z [Main] [32minfo[39m: GET /api/cards/verify/CARD1763807671690
+2025-11-22T10:41:36.130Z [BlockchainService] [32minfo[39m: Querying: VerifyCard with args: ["CARD1763807671690"]
+2025-11-22T10:41:38.050Z [BlockchainService] [32minfo[39m: ✅ Query successful: VerifyCard
+2025-11-22T10:48:37.169Z [Main] [32minfo[39m: GET /api/visits/patient/P001
+2025-11-22T10:48:37.180Z [BlockchainService] [32minfo[39m: Querying: GetPatientVisits with args: ["P001"]
+2025-11-22T10:48:48.195Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetPatientVisits
+2025-11-22T10:49:10.744Z [Main] [32minfo[39m: GET /api/visits/patient/P001
+2025-11-22T10:49:10.872Z [BlockchainService] [32minfo[39m: Querying: GetPatientVisits with args: ["P001"]
+2025-11-22T10:49:12.832Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetPatientVisits
+2025-11-22T10:49:15.827Z [Main] [32minfo[39m: GET /api/visits/patient/P001
+2025-11-22T10:49:15.842Z [BlockchainService] [32minfo[39m: Querying: GetPatientVisits with args: ["P001"]
+2025-11-22T10:49:17.860Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetPatientVisits
+2025-11-22T10:49:20.584Z [Main] [32minfo[39m: POST /api/visits
+2025-11-22T10:49:20.611Z [BlockchainService] [32minfo[39m: Invoking: RecordVisit with args: ["VISIT1763808514226","CARD123","P001","John Doe","RS001","RS Siloam","rumahsakit","2025-11-22","outpatient","Common Cold","Paracetamol, Rest","Dr. Smith","DOC001","Patient recovering well"]
+2025-11-22T10:49:29.742Z [BlockchainService] [31merror[39m: Failed to invoke RecordVisit:
+2025-11-22T10:49:29.748Z [VisitsRoute] [31merror[39m: Error recording visit: Blockchain transaction failed: Command failed: docker exec cli peer chaincode invoke -o orderer1.bpjs-network.com:7050 -C bpjschannel -n bpjs -c "{\"Args\":[\"RecordVisit\",\"VISIT1763808514226\",\"CARD123\",\"P001\",\"John Doe\",\"RS001\",\"RS Siloam\",\"rumahsakit\",\"2025-11-22\",\"outpatient\",\"Common Cold\",\"Paracetamol, Rest\",\"Dr. Smith\",\"DOC001\",\"Patient recovering well\"]}" --peerAddresses bpjs-blockchain-fabric-peer0.bpjs.bpjs-network.com-1:7051 --peerAddresses bpjs-blockchain-fabric-peer0.rumahsakit.bpjs-network.com-1:9051 --waitForEvent
+Error: endorsement failure during invoke. response: status:500 message:"card verification failed: card CARD123 not found" 
+ {"stack":"Error: Blockchain transaction failed: Command failed: docker exec cli peer chaincode invoke -o orderer1.bpjs-network.com:7050 -C bpjschannel -n bpjs -c \"{\\\"Args\\\":[\\\"RecordVisit\\\",\\\"VISIT1763808514226\\\",\\\"CARD123\\\",\\\"P001\\\",\\\"John Doe\\\",\\\"RS001\\\",\\\"RS Siloam\\\",\\\"rumahsakit\\\",\\\"2025-11-22\\\",\\\"outpatient\\\",\\\"Common Cold\\\",\\\"Paracetamol, Rest\\\",\\\"Dr. Smith\\\",\\\"DOC001\\\",\\\"Patient recovering well\\\"]}\" --peerAddresses bpjs-blockchain-fabric-peer0.bpjs.bpjs-network.com-1:7051 --peerAddresses bpjs-blockchain-fabric-peer0.rumahsakit.bpjs-network.com-1:9051 --waitForEvent\nError: endorsement failure during invoke. response: status:500 message:\"card verification failed: card CARD123 not found\" \n\n    at BlockchainService.invoke (D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\fabric\\blockchain.service.ts:50:13)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\routes\\visits.ts:32:5"}
+2025-11-22T10:49:42.858Z [Main] [32minfo[39m: POST /api/visits
+2025-11-22T10:49:42.907Z [BlockchainService] [32minfo[39m: Invoking: RecordVisit with args: ["VISIT1763808514226","CARD1763807671690","P001","John Doe","RS001","RS Siloam","rumahsakit","2025-11-22","outpatient","Common Cold","Paracetamol, Rest","Dr. Smith","DOC001","Patient recovering well"]
+2025-11-22T10:49:45.124Z [BlockchainService] [31merror[39m: Failed to invoke RecordVisit:
+2025-11-22T10:49:45.126Z [VisitsRoute] [31merror[39m: Error recording visit: Blockchain transaction failed: Command failed: docker exec cli peer chaincode invoke -o orderer1.bpjs-network.com:7050 -C bpjschannel -n bpjs -c "{\"Args\":[\"RecordVisit\",\"VISIT1763808514226\",\"CARD1763807671690\",\"P001\",\"John Doe\",\"RS001\",\"RS Siloam\",\"rumahsakit\",\"2025-11-22\",\"outpatient\",\"Common Cold\",\"Paracetamol, Rest\",\"Dr. Smith\",\"DOC001\",\"Patient recovering well\"]}" --peerAddresses bpjs-blockchain-fabric-peer0.bpjs.bpjs-network.com-1:7051 --peerAddresses bpjs-blockchain-fabric-peer0.rumahsakit.bpjs-network.com-1:9051 --waitForEvent
+Error: endorsement failure during invoke. response: status:500 message:"patient ID mismatch" 
+ {"stack":"Error: Blockchain transaction failed: Command failed: docker exec cli peer chaincode invoke -o orderer1.bpjs-network.com:7050 -C bpjschannel -n bpjs -c \"{\\\"Args\\\":[\\\"RecordVisit\\\",\\\"VISIT1763808514226\\\",\\\"CARD1763807671690\\\",\\\"P001\\\",\\\"John Doe\\\",\\\"RS001\\\",\\\"RS Siloam\\\",\\\"rumahsakit\\\",\\\"2025-11-22\\\",\\\"outpatient\\\",\\\"Common Cold\\\",\\\"Paracetamol, Rest\\\",\\\"Dr. Smith\\\",\\\"DOC001\\\",\\\"Patient recovering well\\\"]}\" --peerAddresses bpjs-blockchain-fabric-peer0.bpjs.bpjs-network.com-1:7051 --peerAddresses bpjs-blockchain-fabric-peer0.rumahsakit.bpjs-network.com-1:9051 --waitForEvent\nError: endorsement failure during invoke. response: status:500 message:\"patient ID mismatch\" \n\n    at BlockchainService.invoke (D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\fabric\\blockchain.service.ts:50:13)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\routes\\visits.ts:32:5"}
+2025-11-22T10:51:23.685Z [Main] [32minfo[39m: GET /api/visits/patient/P1763807671690
+2025-11-22T10:51:23.687Z [BlockchainService] [32minfo[39m: Querying: GetPatientVisits with args: ["P1763807671690"]
+2025-11-22T10:51:28.005Z [BlockchainService] [31merror[39m: Failed to query GetPatientVisits:
+2025-11-22T10:51:28.007Z [VisitsRoute] [31merror[39m: Error getting visits: Blockchain query failed: Unexpected end of JSON input {"stack":"Error: Blockchain query failed: Unexpected end of JSON input\n    at BlockchainService.query (D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\fabric\\blockchain.service.ts:82:13)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\routes\\visits.ts:66:20"}
+2025-11-22T10:51:31.084Z [Main] [32minfo[39m: POST /api/visits
+2025-11-22T10:51:31.161Z [BlockchainService] [32minfo[39m: Invoking: RecordVisit with args: ["VISIT1763808655433","CARD1763807671690","P1763807671690","John Doe","RS001","RS Siloam","rumahsakit","2025-11-22","outpatient","Common Cold","Paracetamol, Rest","Dr. Smith","DOC001","Patient recovering well"]
+2025-11-22T10:51:37.752Z [BlockchainService] [32minfo[39m: ✅ Transaction successful: RecordVisit
+2025-11-22T10:51:40.297Z [Main] [32minfo[39m: GET /api/visits/patient/P1763807671690
+2025-11-22T10:51:40.338Z [BlockchainService] [32minfo[39m: Querying: GetPatientVisits with args: ["P1763807671690"]
+2025-11-22T10:51:42.290Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetPatientVisits
+2025-11-22T10:52:44.441Z [Main] [32minfo[39m: GET /health
+2025-11-22T10:52:46.341Z [Main] [32minfo[39m: GET /health
+2025-11-22T10:56:27.161Z [Main] [32minfo[39m: POST /api/cards/issue
+2025-11-22T10:56:45.519Z [Main] [32minfo[39m: POST /api/cards/issue
+2025-11-22T10:56:45.608Z [BlockchainService] [32minfo[39m: Invoking: IssueCard with args: ["CARD1","P001","ILHAM","1234567890123456","2025-11-22","Male","Jakarta, Indonesia","Non-PBI","2025-11-22","2025-11-22"]
+2025-11-22T10:56:51.702Z [BlockchainService] [32minfo[39m: ✅ Transaction successful: IssueCard
+2025-11-22T10:56:54.487Z [Main] [32minfo[39m: GET /api/cards/verify/CARD1
+2025-11-22T10:56:54.512Z [BlockchainService] [32minfo[39m: Querying: VerifyCard with args: ["CARD1"]
+2025-11-22T10:56:56.187Z [BlockchainService] [32minfo[39m: ✅ Query successful: VerifyCard
+2025-11-22T10:56:58.181Z [Main] [32minfo[39m: POST /api/cards/issue
+2025-11-22T10:56:58.307Z [BlockchainService] [32minfo[39m: Invoking: IssueCard with args: ["CARD1","P001","ILHAM","1234567890123456","2025-11-22","Male","Jakarta, Indonesia","Non-PBI","2025-11-22","2025-11-22"]
+2025-11-22T10:57:00.457Z [BlockchainService] [31merror[39m: Failed to invoke IssueCard:
+2025-11-22T10:57:00.461Z [CardsRoute] [31merror[39m: Error issuing card: Blockchain transaction failed: Command failed: docker exec cli peer chaincode invoke -o orderer1.bpjs-network.com:7050 -C bpjschannel -n bpjs -c "{\"Args\":[\"IssueCard\",\"CARD1\",\"P001\",\"ILHAM\",\"1234567890123456\",\"2025-11-22\",\"Male\",\"Jakarta, Indonesia\",\"Non-PBI\",\"2025-11-22\",\"2025-11-22\"]}" --peerAddresses bpjs-blockchain-fabric-peer0.bpjs.bpjs-network.com-1:7051 --peerAddresses bpjs-blockchain-fabric-peer0.rumahsakit.bpjs-network.com-1:9051 --waitForEvent
+Error: endorsement failure during invoke. response: status:500 message:"card CARD1 already exists" 
+ {"stack":"Error: Blockchain transaction failed: Command failed: docker exec cli peer chaincode invoke -o orderer1.bpjs-network.com:7050 -C bpjschannel -n bpjs -c \"{\\\"Args\\\":[\\\"IssueCard\\\",\\\"CARD1\\\",\\\"P001\\\",\\\"ILHAM\\\",\\\"1234567890123456\\\",\\\"2025-11-22\\\",\\\"Male\\\",\\\"Jakarta, Indonesia\\\",\\\"Non-PBI\\\",\\\"2025-11-22\\\",\\\"2025-11-22\\\"]}\" --peerAddresses bpjs-blockchain-fabric-peer0.bpjs.bpjs-network.com-1:7051 --peerAddresses bpjs-blockchain-fabric-peer0.rumahsakit.bpjs-network.com-1:9051 --waitForEvent\nError: endorsement failure during invoke. response: status:500 message:\"card CARD1 already exists\" \n\n    at BlockchainService.invoke (D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\fabric\\blockchain.service.ts:50:13)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\routes\\cards.ts:31:5"}
+2025-11-22T10:57:04.747Z [Main] [32minfo[39m: GET /api/cards/verify/CARD1
+2025-11-22T10:57:04.802Z [BlockchainService] [32minfo[39m: Querying: VerifyCard with args: ["CARD1"]
+2025-11-22T10:57:07.254Z [BlockchainService] [32minfo[39m: ✅ Query successful: VerifyCard
+2025-11-22T10:57:23.310Z [Main] [32minfo[39m: GET /api/visits/patient/P001
+2025-11-22T10:57:23.312Z [BlockchainService] [32minfo[39m: Querying: GetPatientVisits with args: ["P001"]
+2025-11-22T10:57:27.088Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetPatientVisits
+2025-11-22T10:58:02.783Z [Main] [32minfo[39m: POST /api/visits
+2025-11-22T10:58:02.795Z [BlockchainService] [32minfo[39m: Invoking: RecordVisit with args: ["VISIT1","CARD1","P001","ILHAM","RS001","RS Siloam","rumahsakit","2025-11-22","inpatient","Common Cold","Paracetamol, Rest","Dr. Smith","DOC001","Patient recovering well"]
+2025-11-22T10:58:08.094Z [BlockchainService] [32minfo[39m: ✅ Transaction successful: RecordVisit
+2025-11-22T10:58:11.920Z [Main] [32minfo[39m: GET /api/visits/patient/P001
+2025-11-22T10:58:11.935Z [BlockchainService] [32minfo[39m: Querying: GetPatientVisits with args: ["P001"]
+2025-11-22T10:58:13.313Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetPatientVisits
+2025-11-22T11:02:33.335Z [Main] [32minfo[39m: POST /api/visits
+2025-11-22T11:02:33.418Z [BlockchainService] [32minfo[39m: Invoking: RecordVisit with args: ["VISIT1","CARD1","P001","ILHAM","RS001","RS Siloam","rumahsakit","2025-11-22","inpatient","Common Cold","Paracetamol, Rest","Dr. Smith","DOC001","Patient recovering well"]
+2025-11-22T11:03:03.996Z [BlockchainService] [32minfo[39m: ✅ Transaction successful: RecordVisit
+2025-11-22T11:03:16.352Z [Main] [32minfo[39m: GET /api/claims/patient/P001
+2025-11-22T11:03:16.372Z [BlockchainService] [32minfo[39m: Querying: GetPatientClaims with args: ["P001"]
+2025-11-22T11:03:18.295Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetPatientClaims
+2025-11-22T11:08:47.182Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T11:08:50.290Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T11:09:28.540Z [BlockchainService] [32minfo[39m: 🔍 Checking blockchain connection...
+2025-11-22T11:09:28.455Z [Fabric] [32minfo[39m: 🚀 Connecting to Hyperledger Fabric network...
+2025-11-22T11:09:28.444Z [Main] [32minfo[39m: Connecting to Hyperledger Fabric network...
+2025-11-22T11:09:28.459Z [Fabric] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T11:09:28.464Z [Fabric] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T11:09:28.471Z [Fabric] [32minfo[39m: 🐳 CLI Container: cli
+2025-11-22T11:09:29.912Z [BlockchainService] [32minfo[39m: ✅ Blockchain connection successful
+2025-11-22T11:09:29.916Z [Fabric] [32minfo[39m: ✅ Successfully connected to blockchain network
+2025-11-22T11:09:29.918Z [Main] [32minfo[39m: ✅ Connected to Fabric network
+2025-11-22T11:09:29.913Z [BlockchainService] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T11:09:29.914Z [BlockchainService] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T11:09:29.917Z [Fabric] [32minfo[39m: 🔗 Connection mode: Docker exec (via CLI container)
+2025-11-22T11:09:29.929Z [Main] [32minfo[39m: 🚀 API Server running on http://localhost:3001
+2025-11-22T11:09:29.935Z [Main] [32minfo[39m: 📊 Health check: http://localhost:3001/health
+2025-11-22T11:09:34.026Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T11:09:34.131Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T11:09:34.182Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T11:09:34.376Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T11:09:34.477Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T11:09:43.856Z [BlockchainService] [31merror[39m: Failed to query GetAllCards:
+2025-11-22T11:09:43.978Z [BlockchainService] [31merror[39m: Failed to query GetAllVisits:
+2025-11-22T11:09:43.985Z [BlockchainService] [31merror[39m: Failed to query GetAllClaims:
+2025-11-22T11:09:47.024Z [Main] [32minfo[39m: GET /api/dashboard/cards
+2025-11-22T11:09:47.028Z [DashboardRoute] [32minfo[39m: Fetching all cards from blockchain...
+2025-11-22T11:09:47.034Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T11:09:50.420Z [BlockchainService] [31merror[39m: Failed to query GetAllCards:
+2025-11-22T11:09:50.450Z [DashboardRoute] [31merror[39m: Error fetching cards: Blockchain query failed: Command failed: docker exec cli peer chaincode query -C bpjschannel -n bpjs -c "{\"Args\":[\"GetAllCards\"]}"
+Error: endorsement failure during query. response: status:500 message:"Function GetAllCards not found in contract BPJSSmartContract" 
+ {"stack":"Error: Blockchain query failed: Command failed: docker exec cli peer chaincode query -C bpjschannel -n bpjs -c \"{\\\"Args\\\":[\\\"GetAllCards\\\"]}\"\nError: endorsement failure during query. response: status:500 message:\"Function GetAllCards not found in contract BPJSSmartContract\" \n\n    at BlockchainService.query (D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\fabric\\blockchain.service.ts:82:13)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\routes\\dashboard.ts:12:20"}
+2025-11-22T11:09:54.906Z [Main] [32minfo[39m: GET /api/cards/verify/CARD1763809792707
+2025-11-22T11:09:54.912Z [BlockchainService] [32minfo[39m: Querying: VerifyCard with args: ["CARD1763809792707"]
+2025-11-22T11:09:57.112Z [BlockchainService] [31merror[39m: Failed to query VerifyCard:
+2025-11-22T11:09:57.117Z [CardsRoute] [31merror[39m: Error verifying card: Blockchain query failed: Command failed: docker exec cli peer chaincode query -C bpjschannel -n bpjs -c "{\"Args\":[\"VerifyCard\",\"CARD1763809792707\"]}"
+Error: endorsement failure during query. response: status:500 message:"card CARD1763809792707 not found" 
+ {"stack":"Error: Blockchain query failed: Command failed: docker exec cli peer chaincode query -C bpjschannel -n bpjs -c \"{\\\"Args\\\":[\\\"VerifyCard\\\",\\\"CARD1763809792707\\\"]}\"\nError: endorsement failure during query. response: status:500 message:\"card CARD1763809792707 not found\" \n\n    at BlockchainService.query (D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\fabric\\blockchain.service.ts:82:13)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\routes\\cards.ts:61:20"}
+2025-11-22T11:14:57.090Z [Main] [32minfo[39m: GET /api/cards/verify/CARD1
+2025-11-22T11:14:57.095Z [BlockchainService] [32minfo[39m: Querying: VerifyCard with args: ["CARD1"]
+2025-11-22T11:15:09.494Z [BlockchainService] [32minfo[39m: ✅ Query successful: VerifyCard
+2025-11-22T11:15:20.098Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T11:15:20.109Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T11:15:20.122Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T11:15:20.141Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T11:15:20.190Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T11:15:21.734Z [Main] [32minfo[39m: GET /api/dashboard/cards
+2025-11-22T11:15:21.760Z [DashboardRoute] [32minfo[39m: Fetching all cards from blockchain...
+2025-11-22T11:15:21.791Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T11:15:25.362Z [BlockchainService] [31merror[39m: Failed to query GetAllClaims:
+2025-11-22T11:15:25.601Z [BlockchainService] [31merror[39m: Failed to query GetAllCards:
+2025-11-22T11:15:25.618Z [DashboardRoute] [31merror[39m: Error fetching cards: Blockchain query failed: Command failed: docker exec cli peer chaincode query -C bpjschannel -n bpjs -c "{\"Args\":[\"GetAllCards\"]}"
+Error: endorsement failure during query. response: status:500 message:"Function GetAllCards not found in contract BPJSSmartContract" 
+ {"stack":"Error: Blockchain query failed: Command failed: docker exec cli peer chaincode query -C bpjschannel -n bpjs -c \"{\\\"Args\\\":[\\\"GetAllCards\\\"]}\"\nError: endorsement failure during query. response: status:500 message:\"Function GetAllCards not found in contract BPJSSmartContract\" \n\n    at BlockchainService.query (D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\fabric\\blockchain.service.ts:82:13)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\routes\\dashboard.ts:12:20"}
+2025-11-22T11:15:26.370Z [BlockchainService] [31merror[39m: Failed to query GetAllVisits:
+2025-11-22T11:15:26.577Z [BlockchainService] [31merror[39m: Failed to query GetAllCards:
+2025-11-22T11:15:26.628Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T11:15:26.654Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T11:15:26.657Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T11:15:26.685Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T11:15:26.694Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T11:15:33.519Z [BlockchainService] [31merror[39m: Failed to query GetAllClaims:
+2025-11-22T11:15:33.713Z [BlockchainService] [31merror[39m: Failed to query GetAllVisits:
+2025-11-22T11:15:33.914Z [BlockchainService] [31merror[39m: Failed to query GetAllCards:
+2025-11-22T11:32:08.855Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T11:32:08.868Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T11:32:08.873Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T11:32:08.912Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T11:32:09.191Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T11:33:30.272Z [BlockchainService] [32minfo[39m: 🔍 Checking blockchain connection...
+2025-11-22T11:33:30.268Z [Fabric] [32minfo[39m: 🚀 Connecting to Hyperledger Fabric network...
+2025-11-22T11:33:30.260Z [Main] [32minfo[39m: Connecting to Hyperledger Fabric network...
+2025-11-22T11:33:30.269Z [Fabric] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T11:33:30.270Z [Fabric] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T11:33:30.271Z [Fabric] [32minfo[39m: 🐳 CLI Container: cli
+2025-11-22T11:33:31.888Z [BlockchainService] [32minfo[39m: ✅ Blockchain connection successful
+2025-11-22T11:33:31.892Z [Fabric] [32minfo[39m: ✅ Successfully connected to blockchain network
+2025-11-22T11:33:31.895Z [Main] [32minfo[39m: ✅ Connected to Fabric network
+2025-11-22T11:33:31.889Z [BlockchainService] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T11:33:31.890Z [BlockchainService] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T11:33:31.893Z [Fabric] [32minfo[39m: 🔗 Connection mode: Docker exec (via CLI container)
+2025-11-22T11:33:31.902Z [Main] [32minfo[39m: 🚀 API Server running on http://localhost:3001
+2025-11-22T11:33:31.903Z [Main] [32minfo[39m: 📊 Health check: http://localhost:3001/health
+2025-11-22T11:33:41.582Z [Main] [32minfo[39m: GET /health
+2025-11-22T11:33:43.144Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T11:33:43.149Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T11:33:43.228Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T11:33:43.431Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T11:33:43.512Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T11:33:50.395Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T11:33:50.614Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T11:33:50.942Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T11:33:50.953Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T11:33:50.960Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T11:33:50.962Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T11:33:50.982Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T11:33:51.141Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T11:33:52.865Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T11:33:52.973Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T11:33:53.471Z [Main] [32minfo[39m: GET /api/dashboard/cards
+2025-11-22T11:33:53.499Z [DashboardRoute] [32minfo[39m: Fetching all cards from blockchain...
+2025-11-22T11:33:53.516Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T11:33:53.849Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T11:33:55.725Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T11:33:59.860Z [Main] [32minfo[39m: GET /api/dashboard/visits
+2025-11-22T11:33:59.868Z [DashboardRoute] [32minfo[39m: Fetching all visits from blockchain...
+2025-11-22T11:33:59.964Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T11:34:02.449Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T11:34:06.525Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T11:34:06.530Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T11:34:06.552Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T11:34:08.760Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T11:34:13.407Z [Main] [32minfo[39m: GET /api/dashboard/audit-logs
+2025-11-22T11:34:13.452Z [DashboardRoute] [32minfo[39m: Fetching audit logs from blockchain...
+2025-11-22T11:34:13.631Z [BlockchainService] [32minfo[39m: Querying: GetAllAuditLogs with args: []
+2025-11-22T11:34:15.627Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllAuditLogs
+2025-11-22T11:34:29.619Z [Main] [32minfo[39m: GET /api/dashboard/cards
+2025-11-22T11:34:29.640Z [DashboardRoute] [32minfo[39m: Fetching all cards from blockchain...
+2025-11-22T11:34:29.647Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T11:34:32.961Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T11:35:04.626Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T11:35:04.678Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T11:35:04.691Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T11:35:04.708Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T11:35:04.751Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T11:35:07.562Z [Main] [32minfo[39m: GET /api/dashboard/visits
+2025-11-22T11:35:07.571Z [DashboardRoute] [32minfo[39m: Fetching all visits from blockchain...
+2025-11-22T11:35:07.593Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T11:35:10.878Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T11:35:11.037Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T11:35:11.055Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T11:35:11.083Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T11:35:11.316Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T11:35:11.319Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T11:35:11.332Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T11:35:11.527Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T11:35:12.082Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T11:35:13.957Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T11:35:14.019Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T11:35:14.545Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T11:41:19.453Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T11:41:19.461Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T11:41:19.465Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T11:41:28.637Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims

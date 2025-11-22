@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { apiService } from '../services/api'
 
 function VisitTest({ addLog }) {
   const [loading, setLoading] = useState(false)
@@ -29,24 +30,16 @@ function VisitTest({ addLog }) {
 
   const recordVisit = async () => {
     setLoading(true)
-    addLog('info', 'Recording patient visit...', formData)
+    addLog('info', '🚀 Recording patient visit to blockchain...', formData)
     
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      
-      const response = {
-        success: true,
-        visitID: formData.visitID,
-        message: 'Visit recorded successfully',
-        transactionID: 'TX' + Date.now(),
-        timestamp: new Date().toISOString(),
-        blockNumber: Math.floor(Math.random() * 1000) + 100
-      }
+      const response = await apiService.recordVisit(formData)
       
       setResult(response)
-      addLog('success', 'Visit recorded on blockchain!', response)
+      addLog('success', '✅ Visit recorded on blockchain!', response)
     } catch (error) {
-      addLog('error', 'Failed to record visit', error.message)
+      addLog('error', '❌ Failed to record visit: ' + error.message, { error: error.message })
+      setResult({ success: false, error: error.message })
     } finally {
       setLoading(false)
     }
@@ -54,37 +47,16 @@ function VisitTest({ addLog }) {
 
   const getPatientHistory = async () => {
     setLoading(true)
-    addLog('info', `Fetching visit history for patient: ${formData.patientID}`)
+    addLog('info', `🔍 Fetching visit history from blockchain for patient: ${formData.patientID}`)
     
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500))
-      
-      const response = {
-        success: true,
-        patientID: formData.patientID,
-        visits: [
-          {
-            visitID: 'VISIT' + (Date.now() - 86400000),
-            date: new Date(Date.now() - 86400000).toISOString().split('T')[0],
-            faskes: 'Puskesmas Menteng',
-            diagnosis: 'Flu',
-            doctor: 'Dr. Johnson'
-          },
-          {
-            visitID: 'VISIT' + (Date.now() - 172800000),
-            date: new Date(Date.now() - 172800000).toISOString().split('T')[0],
-            faskes: 'RS Cipto',
-            diagnosis: 'Checkup',
-            doctor: 'Dr. Lee'
-          }
-        ],
-        totalVisits: 2
-      }
+      const response = await apiService.getPatientVisits(formData.patientID)
       
       setResult(response)
-      addLog('success', 'Patient history retrieved!', response)
+      addLog('success', '✅ Patient history retrieved from blockchain!', response)
     } catch (error) {
-      addLog('error', 'Failed to get patient history', error.message)
+      addLog('error', '❌ Failed to get patient history: ' + error.message, { error: error.message })
+      setResult({ success: false, error: error.message })
     } finally {
       setLoading(false)
     }

@@ -14,6 +14,17 @@ type BPJSSmartContract struct {
 	contractapi.Contract
 }
 
+// ===== HELPER FUNCTIONS =====
+
+// getTxTimestamp returns the transaction timestamp (deterministic across all peers)
+func getTxTimestamp(ctx contractapi.TransactionContextInterface) time.Time {
+	txTimestamp, err := ctx.GetStub().GetTxTimestamp()
+	if err != nil {
+		return time.Time{}
+	}
+	return time.Unix(txTimestamp.Seconds, int64(txTimestamp.Nanos))
+}
+
 // ===== DATA STRUCTURES =====
 
 // BPJSCard represents digital BPJS card
@@ -25,7 +36,7 @@ type BPJSCard struct {
 	DateOfBirth string    `json:"dateOfBirth"`
 	Gender      string    `json:"gender"`
 	Address     string    `json:"address"`
-	Status      string    `json:"status"` // active, inactive, suspended
+	Status      string    `json:"status"`   // active, inactive, suspended
 	CardType    string    `json:"cardType"` // PBI, Non-PBI
 	IssueDate   string    `json:"issueDate"`
 	ExpiryDate  string    `json:"expiryDate"`
@@ -35,22 +46,22 @@ type BPJSCard struct {
 
 // Visit represents patient visit to healthcare facility
 type Visit struct {
-	VisitID      string    `json:"visitID"`
-	CardID       string    `json:"cardID"`
-	PatientID    string    `json:"patientID"`
-	PatientName  string    `json:"patientName"`
-	FaskesCode   string    `json:"faskesCode"`
-	FaskesName   string    `json:"faskesName"`
-	FaskesType   string    `json:"faskesType"` // puskesmas, rumahsakit
-	VisitDate    string    `json:"visitDate"`
-	VisitType    string    `json:"visitType"` // outpatient, inpatient, emergency
-	Diagnosis    string    `json:"diagnosis"`
-	Treatment    string    `json:"treatment"`
-	DoctorName   string    `json:"doctorName"`
-	DoctorID     string    `json:"doctorID"`
-	Notes        string    `json:"notes"`
-	RecordedBy   string    `json:"recordedBy"`
-	Timestamp    time.Time `json:"timestamp"`
+	VisitID     string    `json:"visitID"`
+	CardID      string    `json:"cardID"`
+	PatientID   string    `json:"patientID"`
+	PatientName string    `json:"patientName"`
+	FaskesCode  string    `json:"faskesCode"`
+	FaskesName  string    `json:"faskesName"`
+	FaskesType  string    `json:"faskesType"` // puskesmas, rumahsakit
+	VisitDate   string    `json:"visitDate"`
+	VisitType   string    `json:"visitType"` // outpatient, inpatient, emergency
+	Diagnosis   string    `json:"diagnosis"`
+	Treatment   string    `json:"treatment"`
+	DoctorName  string    `json:"doctorName"`
+	DoctorID    string    `json:"doctorID"`
+	Notes       string    `json:"notes"`
+	RecordedBy  string    `json:"recordedBy"`
+	Timestamp   time.Time `json:"timestamp"`
 }
 
 // Referral represents patient referral between healthcare facilities
@@ -78,27 +89,27 @@ type Referral struct {
 
 // Claim represents insurance claim submission
 type Claim struct {
-	ClaimID       string    `json:"claimID"`
-	PatientID     string    `json:"patientID"`
-	PatientName   string    `json:"patientName"`
-	CardID        string    `json:"cardID"`
-	VisitID       string    `json:"visitID"`
-	FaskesCode    string    `json:"faskesCode"`
-	FaskesName    string    `json:"faskesName"`
-	ClaimType     string    `json:"claimType"` // rawat-jalan, rawat-inap, emergency
-	ServiceDate   string    `json:"serviceDate"`
-	Diagnosis     string    `json:"diagnosis"`
-	Treatment     string    `json:"treatment"`
-	TotalAmount   float64   `json:"totalAmount"`
-	ClaimAmount   float64   `json:"claimAmount"`
-	Status        string    `json:"status"` // submitted, reviewing, approved, rejected, paid
-	SubmittedBy   string    `json:"submittedBy"`
-	SubmitDate    string    `json:"submitDate"`
-	ReviewedBy    string    `json:"reviewedBy"`
-	ReviewDate    string    `json:"reviewDate"`
-	ReviewNotes   string    `json:"reviewNotes"`
-	PaymentDate   string    `json:"paymentDate"`
-	Timestamp     time.Time `json:"timestamp"`
+	ClaimID     string    `json:"claimID"`
+	PatientID   string    `json:"patientID"`
+	PatientName string    `json:"patientName"`
+	CardID      string    `json:"cardID"`
+	VisitID     string    `json:"visitID"`
+	FaskesCode  string    `json:"faskesCode"`
+	FaskesName  string    `json:"faskesName"`
+	ClaimType   string    `json:"claimType"` // rawat-jalan, rawat-inap, emergency
+	ServiceDate string    `json:"serviceDate"`
+	Diagnosis   string    `json:"diagnosis"`
+	Treatment   string    `json:"treatment"`
+	TotalAmount float64   `json:"totalAmount"`
+	ClaimAmount float64   `json:"claimAmount"`
+	Status      string    `json:"status"` // submitted, reviewing, approved, rejected, paid
+	SubmittedBy string    `json:"submittedBy"`
+	SubmitDate  string    `json:"submitDate"`
+	ReviewedBy  string    `json:"reviewedBy"`
+	ReviewDate  string    `json:"reviewDate"`
+	ReviewNotes string    `json:"reviewNotes"`
+	PaymentDate string    `json:"paymentDate"`
+	Timestamp   time.Time `json:"timestamp"`
 }
 
 // AuditLog represents audit trail entry
@@ -152,7 +163,7 @@ func (s *BPJSSmartContract) IssueCard(ctx contractapi.TransactionContextInterfac
 		IssueDate:   issueDate,
 		ExpiryDate:  expiryDate,
 		IssuedBy:    issuer,
-		Timestamp:   time.Now(),
+		Timestamp:   getTxTimestamp(ctx),
 	}
 
 	cardJSON, err := json.Marshal(card)
@@ -180,12 +191,12 @@ func (s *BPJSSmartContract) IssueCard(ctx contractapi.TransactionContextInterfac
 	ctx.GetStub().SetEvent("CardIssued", []byte(fmt.Sprintf("Card %s issued to %s", cardID, patientName)))
 
 	// Log audit
-	return s.createAuditLog(ctx, "IssueCard", "card", cardID, issuer, "BPJS_ADMIN", 
+	return s.createAuditLog(ctx, "IssueCard", "card", cardID, issuer, "BPJS_ADMIN",
 		fmt.Sprintf("Issued BPJS card to %s", patientName))
 }
 
 // VerifyCard verifies card status and returns card details
-func (s *BPJSSmartContract) VerifyCard(ctx contractapi.TransactionContextInterface, 
+func (s *BPJSSmartContract) VerifyCard(ctx contractapi.TransactionContextInterface,
 	cardID string) (*BPJSCard, error) {
 
 	cardJSON, err := ctx.GetStub().GetState(cardID)
@@ -223,7 +234,7 @@ func (s *BPJSSmartContract) UpdateCardStatus(ctx contractapi.TransactionContextI
 
 	oldStatus := card.Status
 	card.Status = newStatus
-	card.Timestamp = time.Now()
+	card.Timestamp = getTxTimestamp(ctx)
 
 	updatedJSON, _ := json.Marshal(card)
 	err = ctx.GetStub().PutState(cardID, updatedJSON)
@@ -274,7 +285,7 @@ func (s *BPJSSmartContract) RecordVisit(ctx contractapi.TransactionContextInterf
 		DoctorID:    doctorID,
 		Notes:       notes,
 		RecordedBy:  recorder,
-		Timestamp:   time.Now(),
+		Timestamp:   getTxTimestamp(ctx),
 	}
 
 	visitJSON, _ := json.Marshal(visit)
@@ -366,7 +377,7 @@ func (s *BPJSSmartContract) CreateReferral(ctx contractapi.TransactionContextInt
 		Status:          "pending",
 		Notes:           notes,
 		CreatedBy:       creator,
-		Timestamp:       time.Now(),
+		Timestamp:       getTxTimestamp(ctx),
 	}
 
 	referralJSON, _ := json.Marshal(referral)
@@ -399,9 +410,9 @@ func (s *BPJSSmartContract) UpdateReferralStatus(ctx contractapi.TransactionCont
 
 	referral.Status = newStatus
 	referral.AcceptedBy = acceptedBy
-	referral.AcceptedDate = time.Now().Format("2006-01-02")
+	referral.AcceptedDate = getTxTimestamp(ctx).Format("2006-01-02")
 	referral.Notes = notes
-	referral.Timestamp = time.Now()
+	referral.Timestamp = getTxTimestamp(ctx)
 
 	updatedJSON, _ := json.Marshal(referral)
 	err = ctx.GetStub().PutState(referralID, updatedJSON)
@@ -446,8 +457,8 @@ func (s *BPJSSmartContract) SubmitClaim(ctx contractapi.TransactionContextInterf
 		ClaimAmount: claimAmount,
 		Status:      "submitted",
 		SubmittedBy: submitter,
-		SubmitDate:  time.Now().Format("2006-01-02"),
-		Timestamp:   time.Now(),
+		SubmitDate:  getTxTimestamp(ctx).Format("2006-01-02"),
+		Timestamp:   getTxTimestamp(ctx),
 	}
 
 	claimJSON, _ := json.Marshal(claim)
@@ -482,14 +493,14 @@ func (s *BPJSSmartContract) ProcessClaim(ctx contractapi.TransactionContextInter
 
 	claim.Status = newStatus
 	claim.ReviewedBy = reviewer
-	claim.ReviewDate = time.Now().Format("2006-01-02")
+	claim.ReviewDate = getTxTimestamp(ctx).Format("2006-01-02")
 	claim.ReviewNotes = reviewNotes
 
 	if newStatus == "approved" {
-		claim.PaymentDate = time.Now().Add(7 * 24 * time.Hour).Format("2006-01-02") // Payment in 7 days
+		claim.PaymentDate = getTxTimestamp(ctx).Add(7 * 24 * time.Hour).Format("2006-01-02") // Payment in 7 days
 	}
 
-	claim.Timestamp = time.Now()
+	claim.Timestamp = getTxTimestamp(ctx)
 
 	updatedJSON, _ := json.Marshal(claim)
 	err = ctx.GetStub().PutState(claimID, updatedJSON)
@@ -539,6 +550,139 @@ func (s *BPJSSmartContract) GetPatientClaims(ctx contractapi.TransactionContextI
 	return claims, nil
 }
 
+// ===== GET ALL FUNCTIONS =====
+
+// GetAllCards retrieves all BPJS cards from the blockchain
+func (s *BPJSSmartContract) GetAllCards(ctx contractapi.TransactionContextInterface) ([]*BPJSCard, error) {
+	// Query with empty string to get all
+	resultsIterator, err := ctx.GetStub().GetStateByRange("CARD", "CARD~")
+	if err != nil {
+		return nil, fmt.Errorf("failed to get cards: %v", err)
+	}
+	defer resultsIterator.Close()
+
+	var cards []*BPJSCard
+	for resultsIterator.HasNext() {
+		queryResponse, err := resultsIterator.Next()
+		if err != nil {
+			return nil, err
+		}
+
+		var card BPJSCard
+		err = json.Unmarshal(queryResponse.Value, &card)
+		if err != nil {
+			continue // Skip invalid entries
+		}
+		cards = append(cards, &card)
+	}
+
+	return cards, nil
+}
+
+// GetAllVisits retrieves all patient visits from the blockchain
+func (s *BPJSSmartContract) GetAllVisits(ctx contractapi.TransactionContextInterface) ([]*Visit, error) {
+	resultsIterator, err := ctx.GetStub().GetStateByRange("VISIT", "VISIT~")
+	if err != nil {
+		return nil, fmt.Errorf("failed to get visits: %v", err)
+	}
+	defer resultsIterator.Close()
+
+	var visits []*Visit
+	for resultsIterator.HasNext() {
+		queryResponse, err := resultsIterator.Next()
+		if err != nil {
+			return nil, err
+		}
+
+		var visit Visit
+		err = json.Unmarshal(queryResponse.Value, &visit)
+		if err != nil {
+			continue // Skip invalid entries
+		}
+		visits = append(visits, &visit)
+	}
+
+	return visits, nil
+}
+
+// GetAllClaims retrieves all insurance claims from the blockchain
+func (s *BPJSSmartContract) GetAllClaims(ctx contractapi.TransactionContextInterface) ([]*Claim, error) {
+	resultsIterator, err := ctx.GetStub().GetStateByRange("CLAIM", "CLAIM~")
+	if err != nil {
+		return nil, fmt.Errorf("failed to get claims: %v", err)
+	}
+	defer resultsIterator.Close()
+
+	var claims []*Claim
+	for resultsIterator.HasNext() {
+		queryResponse, err := resultsIterator.Next()
+		if err != nil {
+			return nil, err
+		}
+
+		var claim Claim
+		err = json.Unmarshal(queryResponse.Value, &claim)
+		if err != nil {
+			continue // Skip invalid entries
+		}
+		claims = append(claims, &claim)
+	}
+
+	return claims, nil
+}
+
+// GetAllReferrals retrieves all referrals from the blockchain
+func (s *BPJSSmartContract) GetAllReferrals(ctx contractapi.TransactionContextInterface) ([]*Referral, error) {
+	resultsIterator, err := ctx.GetStub().GetStateByRange("REF", "REF~")
+	if err != nil {
+		return nil, fmt.Errorf("failed to get referrals: %v", err)
+	}
+	defer resultsIterator.Close()
+
+	var referrals []*Referral
+	for resultsIterator.HasNext() {
+		queryResponse, err := resultsIterator.Next()
+		if err != nil {
+			return nil, err
+		}
+
+		var referral Referral
+		err = json.Unmarshal(queryResponse.Value, &referral)
+		if err != nil {
+			continue // Skip invalid entries
+		}
+		referrals = append(referrals, &referral)
+	}
+
+	return referrals, nil
+}
+
+// GetAllAuditLogs retrieves all audit logs from the blockchain
+func (s *BPJSSmartContract) GetAllAuditLogs(ctx contractapi.TransactionContextInterface) ([]*AuditLog, error) {
+	resultsIterator, err := ctx.GetStub().GetStateByRange("AUDIT", "AUDIT~")
+	if err != nil {
+		return nil, fmt.Errorf("failed to get audit logs: %v", err)
+	}
+	defer resultsIterator.Close()
+
+	var logs []*AuditLog
+	for resultsIterator.HasNext() {
+		queryResponse, err := resultsIterator.Next()
+		if err != nil {
+			return nil, err
+		}
+
+		var log AuditLog
+		err = json.Unmarshal(queryResponse.Value, &log)
+		if err != nil {
+			continue // Skip invalid entries
+		}
+		logs = append(logs, &log)
+	}
+
+	return logs, nil
+}
+
 // ===== AUDIT FUNCTIONS =====
 
 func (s *BPJSSmartContract) createAuditLog(ctx contractapi.TransactionContextInterface,
@@ -546,7 +690,7 @@ func (s *BPJSSmartContract) createAuditLog(ctx contractapi.TransactionContextInt
 	description string) error {
 
 	orgID, _ := ctx.GetClientIdentity().GetMSPID()
-	logID := fmt.Sprintf("AUDIT_%d", time.Now().UnixNano())
+	logID := fmt.Sprintf("AUDIT_%d", getTxTimestamp(ctx).UnixNano())
 
 	auditLog := AuditLog{
 		LogID:       logID,
@@ -557,7 +701,8 @@ func (s *BPJSSmartContract) createAuditLog(ctx contractapi.TransactionContextInt
 		ActorRole:   actorRole,
 		OrgID:       orgID,
 		Description: description,
-		Timestamp:   time.Now(),
+		IPAddress:   "",
+		Timestamp:   getTxTimestamp(ctx),
 	}
 
 	auditJSON, _ := json.Marshal(auditLog)

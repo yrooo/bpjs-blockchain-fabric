@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { apiService } from '../services/api'
 
 function CardTest({ addLog }) {
   const [loading, setLoading] = useState(false)
@@ -25,25 +26,16 @@ function CardTest({ addLog }) {
 
   const issueCard = async () => {
     setLoading(true)
-    addLog('info', 'Issuing BPJS card...', formData)
+    addLog('info', '🚀 Issuing BPJS card to blockchain...', formData)
     
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      
-      const response = {
-        success: true,
-        cardID: formData.cardID,
-        status: 'active',
-        message: 'Card issued successfully',
-        transactionID: 'TX' + Date.now(),
-        timestamp: new Date().toISOString()
-      }
+      const response = await apiService.issueCard(formData)
       
       setResult(response)
-      addLog('success', 'Card issued successfully!', response)
+      addLog('success', '✅ Card issued successfully on blockchain!', response)
     } catch (error) {
-      addLog('error', 'Failed to issue card', error.message)
+      addLog('error', '❌ Failed to issue card: ' + error.message, { error: error.message })
+      setResult({ success: false, error: error.message })
     } finally {
       setLoading(false)
     }
@@ -51,25 +43,21 @@ function CardTest({ addLog }) {
 
   const verifyCard = async () => {
     setLoading(true)
-    addLog('info', `Verifying card: ${formData.cardID}`)
+    addLog('info', `🔍 Verifying card from blockchain: ${formData.cardID}`)
     
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500))
+      const response = await apiService.verifyCard(formData.cardID)
       
-      const response = {
-        success: true,
-        card: {
-          ...formData,
-          status: 'active',
-          qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${formData.cardID}`
-        },
-        message: 'Card is valid and active'
+      // Add QR code to response
+      if (response.success && response.card) {
+        response.card.qrCode = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${formData.cardID}`
       }
       
       setResult(response)
-      addLog('success', 'Card verified successfully!', response)
+      addLog('success', '✅ Card verified from blockchain!', response)
     } catch (error) {
-      addLog('error', 'Failed to verify card', error.message)
+      addLog('error', '❌ Failed to verify card: ' + error.message, { error: error.message })
+      setResult({ success: false, error: error.message })
     } finally {
       setLoading(false)
     }
