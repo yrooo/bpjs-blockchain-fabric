@@ -355,3 +355,588 @@ Error: endorsement failure during query. response: status:500 message:"Function 
 2025-11-22T11:41:19.461Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
 2025-11-22T11:41:19.465Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
 2025-11-22T11:41:28.637Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T12:22:51.951Z [BlockchainService] [32minfo[39m: 🔍 Checking blockchain connection...
+2025-11-22T12:22:51.599Z [Fabric] [32minfo[39m: 🚀 Connecting to Hyperledger Fabric network...
+2025-11-22T12:22:51.585Z [Main] [32minfo[39m: Connecting to Hyperledger Fabric network...
+2025-11-22T12:22:51.606Z [Fabric] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T12:22:51.607Z [Fabric] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T12:22:51.665Z [Fabric] [32minfo[39m: 🐳 CLI Container: cli
+2025-11-22T12:23:03.130Z [BlockchainService] [32minfo[39m: ✅ Blockchain connection successful
+2025-11-22T12:23:03.136Z [Fabric] [32minfo[39m: ✅ Successfully connected to blockchain network
+2025-11-22T12:23:03.139Z [Main] [32minfo[39m: ✅ Connected to Fabric network
+2025-11-22T12:23:03.132Z [BlockchainService] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T12:23:03.133Z [BlockchainService] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T12:23:03.137Z [Fabric] [32minfo[39m: 🔗 Connection mode: Docker exec (via CLI container)
+2025-11-22T12:23:03.174Z [Main] [32minfo[39m: 🚀 API Server running on http://localhost:3001
+2025-11-22T12:23:03.184Z [Main] [32minfo[39m: 📊 Health check: http://localhost:3001/health
+2025-11-22T12:35:31.341Z [BlockchainService] [32minfo[39m: 🔍 Checking blockchain connection...
+2025-11-22T12:35:31.247Z [Fabric] [32minfo[39m: 🚀 Connecting to Hyperledger Fabric network...
+2025-11-22T12:35:31.234Z [Main] [32minfo[39m: Connecting to Hyperledger Fabric network...
+2025-11-22T12:35:31.260Z [Fabric] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T12:35:31.313Z [Fabric] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T12:35:31.338Z [Fabric] [32minfo[39m: 🐳 CLI Container: cli
+2025-11-22T12:35:35.271Z [BlockchainService] [32minfo[39m: ✅ Blockchain connection successful
+2025-11-22T12:35:35.344Z [Fabric] [32minfo[39m: ✅ Successfully connected to blockchain network
+2025-11-22T12:35:35.363Z [Main] [32minfo[39m: ✅ Connected to Fabric network
+2025-11-22T12:35:35.340Z [BlockchainService] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T12:35:35.342Z [BlockchainService] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T12:35:35.346Z [Fabric] [32minfo[39m: 🔗 Connection mode: Docker exec (via CLI container)
+2025-11-22T12:35:35.375Z [Main] [32minfo[39m: 🚀 API Server running on http://localhost:3001
+2025-11-22T12:35:35.380Z [Main] [32minfo[39m: 📊 Health check: http://localhost:3001/health
+2025-11-22T12:41:05.835Z [Main] [32minfo[39m: GET /api/health
+2025-11-22T12:41:14.622Z [Main] [32minfo[39m: GET /api/health
+2025-11-22T12:41:53.774Z [Main] [32minfo[39m: GET /health
+2025-11-22T12:42:28.638Z [Main] [32minfo[39m: GET /health
+2025-11-22T12:42:37.619Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T12:42:37.630Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T12:42:37.638Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T12:42:37.684Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T12:42:37.732Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T12:42:44.713Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T12:42:44.731Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T12:42:44.741Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T12:51:35.723Z [Main] [32minfo[39m: GET /api/
+2025-11-22T12:51:39.948Z [Main] [32minfo[39m: GET /health
+2025-11-22T12:53:52.655Z [Main] [32minfo[39m: GET /api/
+2025-11-22T13:25:34.251Z [BlockchainService] [32minfo[39m: 🔍 Checking blockchain connection...
+2025-11-22T13:25:34.240Z [Fabric] [32minfo[39m: 🚀 Connecting to Hyperledger Fabric network...
+2025-11-22T13:25:34.228Z [Main] [32minfo[39m: Connecting to Hyperledger Fabric network...
+2025-11-22T13:25:34.244Z [Fabric] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T13:25:34.247Z [Fabric] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T13:25:34.248Z [Fabric] [32minfo[39m: 🐳 CLI Container: cli
+2025-11-22T13:25:37.763Z [BlockchainService] [32minfo[39m: ✅ Blockchain connection successful
+2025-11-22T13:25:37.829Z [Fabric] [32minfo[39m: ✅ Successfully connected to blockchain network
+2025-11-22T13:25:37.851Z [Main] [32minfo[39m: ✅ Connected to Fabric network
+2025-11-22T13:25:37.765Z [BlockchainService] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T13:25:37.823Z [BlockchainService] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T13:25:37.833Z [Fabric] [32minfo[39m: 🔗 Connection mode: Docker exec (via CLI container)
+2025-11-22T13:25:37.869Z [Main] [32minfo[39m: 🚀 API Server running on http://localhost:3001
+2025-11-22T13:25:37.875Z [Main] [32minfo[39m: 📊 Health check: http://localhost:3001/health
+2025-11-22T13:26:05.118Z [Main] [32minfo[39m: GET /health
+2025-11-22T13:26:05.357Z [Main] [32minfo[39m: GET /health
+2025-11-22T13:26:14.836Z [Main] [32minfo[39m: GET /health
+2025-11-22T13:27:18.319Z [BlockchainService] [32minfo[39m: 🔍 Checking blockchain connection...
+2025-11-22T13:27:18.184Z [Fabric] [32minfo[39m: 🚀 Connecting to Hyperledger Fabric network...
+2025-11-22T13:27:18.058Z [Main] [32minfo[39m: Connecting to Hyperledger Fabric network...
+2025-11-22T13:27:18.248Z [Fabric] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T13:27:18.281Z [Fabric] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T13:27:18.285Z [Fabric] [32minfo[39m: 🐳 CLI Container: cli
+2025-11-22T13:27:20.712Z [BlockchainService] [32minfo[39m: ✅ Blockchain connection successful
+2025-11-22T13:27:20.716Z [Fabric] [32minfo[39m: ✅ Successfully connected to blockchain network
+2025-11-22T13:27:20.763Z [Main] [32minfo[39m: ✅ Connected to Fabric network
+2025-11-22T13:27:20.713Z [BlockchainService] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T13:27:20.714Z [BlockchainService] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T13:27:20.752Z [Fabric] [32minfo[39m: 🔗 Connection mode: Docker exec (via CLI container)
+2025-11-22T13:27:20.777Z [Main] [32minfo[39m: 🚀 API Server running on http://localhost:3001
+2025-11-22T13:27:20.782Z [Main] [32minfo[39m: 📊 Health check: http://localhost:3001/health
+2025-11-22T13:27:36.503Z [Main] [32minfo[39m: GET /health
+2025-11-22T13:27:45.183Z [Main] [32minfo[39m: GET /health
+2025-11-22T13:27:46.064Z [Main] [32minfo[39m: GET /health
+2025-11-22T13:29:44.696Z [Main] [32minfo[39m: GET /health
+2025-11-22T13:29:45.023Z [Main] [32minfo[39m: GET /health
+2025-11-22T13:29:47.908Z [Main] [32minfo[39m: GET /health
+2025-11-22T13:30:40.735Z [Main] [32minfo[39m: GET /health
+2025-11-22T13:30:42.396Z [Main] [32minfo[39m: GET /health
+2025-11-22T13:31:35.285Z [Main] [32minfo[39m: GET /health
+2025-11-22T13:32:37.567Z [Main] [32minfo[39m: GET /health
+2025-11-22T13:33:47.262Z [BlockchainService] [32minfo[39m: 🔍 Checking blockchain connection...
+2025-11-22T13:33:47.225Z [Fabric] [32minfo[39m: 🚀 Connecting to Hyperledger Fabric network...
+2025-11-22T13:33:47.214Z [Main] [32minfo[39m: Connecting to Hyperledger Fabric network...
+2025-11-22T13:33:47.227Z [Fabric] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T13:33:47.238Z [Fabric] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T13:33:47.241Z [Fabric] [32minfo[39m: 🐳 CLI Container: cli
+2025-11-22T13:33:48.941Z [BlockchainService] [32minfo[39m: ✅ Blockchain connection successful
+2025-11-22T13:33:48.944Z [Fabric] [32minfo[39m: ✅ Successfully connected to blockchain network
+2025-11-22T13:33:48.948Z [Main] [32minfo[39m: ✅ Connected to Fabric network
+2025-11-22T13:33:48.942Z [BlockchainService] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T13:33:48.943Z [BlockchainService] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T13:33:48.945Z [Fabric] [32minfo[39m: 🔗 Connection mode: Docker exec (via CLI container)
+2025-11-22T13:33:48.963Z [Main] [32minfo[39m: 🚀 API Server running on http://localhost:3001
+2025-11-22T13:33:48.975Z [Main] [32minfo[39m: 📊 Health check: http://localhost:3001/health
+2025-11-22T13:33:58.197Z [Main] [32minfo[39m: GET /health
+2025-11-22T13:34:23.747Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T13:34:23.752Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T13:34:23.871Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T13:34:23.900Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T13:34:24.085Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T13:34:36.456Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T13:34:36.463Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T13:34:36.518Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T13:34:36.530Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T13:34:36.548Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T13:34:36.550Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T13:34:36.730Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T13:34:37.207Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T13:34:39.897Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T13:34:41.846Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T13:34:42.297Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T13:34:46.860Z [Main] [32minfo[39m: GET /api/dashboard/cards
+2025-11-22T13:34:46.864Z [DashboardRoute] [32minfo[39m: Fetching all cards from blockchain...
+2025-11-22T13:34:46.865Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T13:34:49.126Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T13:35:39.154Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T13:35:39.165Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T13:35:39.166Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T13:35:41.907Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T13:36:54.401Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T13:36:54.417Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T13:36:54.456Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T13:36:54.489Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T13:36:54.691Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T13:37:04.363Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T13:37:04.371Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T13:37:04.860Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T13:37:04.925Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T13:37:05.094Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T13:37:05.096Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T13:37:05.222Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T13:37:05.278Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T13:37:08.773Z [Main] [32minfo[39m: GET /health
+2025-11-22T13:37:09.050Z [Main] [32minfo[39m: GET /health
+2025-11-22T13:37:10.110Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T13:37:10.212Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T13:37:10.309Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T13:37:40.520Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T13:37:40.592Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T13:37:40.594Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T13:37:40.624Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T13:37:40.651Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T13:37:44.523Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T13:37:44.641Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T13:37:44.733Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T13:37:44.752Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T13:37:44.787Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T13:37:44.789Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T13:37:44.803Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T13:37:44.814Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T13:37:49.042Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T13:37:49.092Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T13:37:49.159Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T13:37:49.170Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T13:37:49.187Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T13:37:49.189Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T13:37:49.201Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T13:37:49.212Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T13:37:52.540Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T13:37:52.878Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T13:37:53.669Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T13:37:53.755Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T13:37:53.784Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T13:37:53.786Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T13:37:53.798Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T13:37:53.810Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T13:37:57.114Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T13:37:57.292Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T13:37:58.697Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T13:41:13.649Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T13:41:13.682Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T13:41:13.695Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T13:41:13.711Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T13:41:13.734Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T13:41:15.180Z [Main] [32minfo[39m: GET /health
+2025-11-22T13:41:15.231Z [Main] [32minfo[39m: GET /health
+2025-11-22T13:41:16.712Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T13:41:16.841Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T13:41:17.287Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T13:41:17.303Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T13:41:17.308Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T13:41:17.309Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T13:41:17.322Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T13:41:17.334Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T13:41:18.730Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T13:41:18.757Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T13:41:19.361Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T13:41:39.994Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T13:41:40.063Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T13:41:40.064Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T13:41:40.110Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T13:41:40.154Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T13:41:42.896Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T13:41:42.916Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T13:41:42.924Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T13:41:42.934Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T13:41:42.945Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T13:41:42.946Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T13:41:42.956Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T13:41:42.968Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T13:41:44.826Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T13:41:45.375Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T13:41:45.431Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T13:54:33.977Z [BlockchainService] [32minfo[39m: 🔍 Checking blockchain connection...
+2025-11-22T13:54:33.703Z [Fabric] [32minfo[39m: 🚀 Connecting to Hyperledger Fabric network...
+2025-11-22T13:54:33.668Z [Main] [32minfo[39m: Connecting to Hyperledger Fabric network...
+2025-11-22T13:54:33.734Z [Fabric] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T13:54:33.869Z [Fabric] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T13:54:33.964Z [Fabric] [32minfo[39m: 🐳 CLI Container: cli
+2025-11-22T13:55:00.164Z [BlockchainService] [32minfo[39m: ✅ Blockchain connection successful
+2025-11-22T13:55:00.169Z [Fabric] [32minfo[39m: ✅ Successfully connected to blockchain network
+2025-11-22T13:55:00.174Z [Main] [32minfo[39m: ✅ Connected to Fabric network
+2025-11-22T13:55:24.824Z [BlockchainService] [32minfo[39m: 🔍 Checking blockchain connection...
+2025-11-22T13:55:24.810Z [Fabric] [32minfo[39m: 🚀 Connecting to Hyperledger Fabric network...
+2025-11-22T13:55:24.800Z [Main] [32minfo[39m: Connecting to Hyperledger Fabric network...
+2025-11-22T13:55:24.812Z [Fabric] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T13:55:24.817Z [Fabric] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T13:55:24.818Z [Fabric] [32minfo[39m: 🐳 CLI Container: cli
+2025-11-22T13:55:28.622Z [BlockchainService] [32minfo[39m: ✅ Blockchain connection successful
+2025-11-22T13:55:28.627Z [Fabric] [32minfo[39m: ✅ Successfully connected to blockchain network
+2025-11-22T13:55:28.632Z [Main] [32minfo[39m: ✅ Connected to Fabric network
+2025-11-22T13:55:28.623Z [BlockchainService] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T13:55:28.624Z [BlockchainService] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T13:55:28.628Z [Fabric] [32minfo[39m: 🔗 Connection mode: Docker exec (via CLI container)
+2025-11-22T13:55:28.643Z [Main] [32minfo[39m: 🚀 API Server running on http://localhost:3001
+2025-11-22T13:55:28.645Z [Main] [32minfo[39m: 📊 Health check: http://localhost:3001/health
+2025-11-22T14:02:54.501Z [Main] [32minfo[39m: GET /health
+2025-11-22T14:03:06.673Z [Main] [32minfo[39m: GET /health
+2025-11-22T14:03:16.964Z [Main] [32minfo[39m: GET /health
+2025-11-22T14:03:26.495Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T14:03:26.532Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T14:03:26.539Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T14:03:26.573Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T14:03:26.667Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T14:03:39.646Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T14:03:39.675Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T14:03:39.678Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T14:12:29.723Z [Main] [32minfo[39m: GET /health
+2025-11-22T14:16:52.296Z [BlockchainService] [32minfo[39m: 🔍 Checking blockchain connection...
+2025-11-22T14:16:52.168Z [Fabric] [32minfo[39m: 🚀 Connecting to Hyperledger Fabric network...
+2025-11-22T14:16:52.073Z [Main] [32minfo[39m: Connecting to Hyperledger Fabric network...
+2025-11-22T14:16:52.179Z [Fabric] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T14:16:52.208Z [Fabric] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T14:16:52.256Z [Fabric] [32minfo[39m: 🐳 CLI Container: cli
+2025-11-22T14:16:53.844Z [BlockchainService] [32minfo[39m: ✅ Blockchain connection successful
+2025-11-22T14:16:53.849Z [Fabric] [32minfo[39m: ✅ Successfully connected to blockchain network
+2025-11-22T14:16:53.854Z [Main] [32minfo[39m: ✅ Connected to Fabric network
+2025-11-22T14:16:53.845Z [BlockchainService] [32minfo[39m: 📦 Chaincode: bpjs
+2025-11-22T14:16:53.847Z [BlockchainService] [32minfo[39m: 📺 Channel: bpjschannel
+2025-11-22T14:16:53.850Z [Fabric] [32minfo[39m: 🔗 Connection mode: Docker exec (via CLI container)
+2025-11-22T14:16:53.864Z [Main] [32minfo[39m: 🚀 API Server running on http://localhost:3001
+2025-11-22T14:16:53.879Z [Main] [32minfo[39m: 📊 Health check: http://localhost:3001/health
+2025-11-22T14:32:55.522Z [Main] [32minfo[39m: GET /health
+2025-11-22T14:32:55.564Z [Main] [32minfo[39m: GET /health
+2025-11-22T14:49:09.064Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T14:49:09.121Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T14:49:09.225Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T14:49:09.414Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T14:49:09.710Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T14:49:23.798Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T14:49:23.813Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T14:49:23.860Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T14:49:23.899Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T14:49:23.950Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T14:49:23.960Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T14:49:23.982Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T14:49:24.025Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T14:49:28.461Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T14:49:28.516Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T14:49:28.595Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T14:49:28.611Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T14:49:28.629Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T14:49:28.631Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T14:49:28.661Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T14:49:28.715Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T14:49:33.397Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T14:49:33.404Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T14:49:33.408Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T14:49:33.427Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T14:49:33.465Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T14:49:34.350Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T14:49:34.484Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T14:49:34.731Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T14:49:37.526Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T14:49:37.680Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T14:49:38.739Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T14:52:00.227Z [Main] [32minfo[39m: GET /health
+2025-11-22T14:52:00.296Z [Main] [32minfo[39m: GET /health
+2025-11-22T15:01:58.023Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:01:58.034Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:01:58.042Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:01:58.061Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:01:58.162Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:02:03.390Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:02:03.397Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:02:05.463Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:02:05.491Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:02:05.495Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:02:05.496Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:02:05.612Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:02:05.773Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:02:11.997Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:02:12.183Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:02:12.514Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:02:12.527Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:02:12.530Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:02:12.531Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:02:12.545Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:02:12.563Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:02:16.906Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:02:17.081Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:02:17.124Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:02:17.557Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:02:17.757Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:02:17.759Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:02:17.805Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:02:18.048Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:02:22.956Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:02:22.964Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:02:23.157Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:03:08.905Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:03:08.954Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:03:08.973Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:03:08.987Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:03:09.128Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:03:13.835Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:03:14.251Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:03:15.470Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:03:15.485Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:03:15.495Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:03:15.497Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:03:15.511Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:03:15.556Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:03:21.127Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:03:21.140Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:03:21.175Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:03:21.306Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:03:21.311Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:03:21.313Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:03:21.339Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:03:21.361Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:03:27.785Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:03:27.969Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:03:28.320Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:03:33.412Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:03:33.419Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:03:33.422Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:03:35.582Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:03:35.590Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:03:35.660Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:03:35.661Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:03:37.710Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:04:12.919Z [Main] [32minfo[39m: POST /api/cards/issue
+2025-11-22T15:04:19.667Z [Main] [32minfo[39m: POST /api/cards/issue
+2025-11-22T15:05:42.607Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:05:42.609Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:05:42.612Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:05:42.635Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:05:42.691Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:05:44.421Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:05:44.522Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:05:44.600Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:05:50.633Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:05:51.335Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:05:51.578Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:05:51.620Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:05:51.625Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:05:51.640Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:05:51.656Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:05:51.673Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:05:58.043Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:05:58.067Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:05:58.098Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:05:58.099Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:05:58.993Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:05:59.173Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:05:59.272Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:06:04.009Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:06:04.041Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:06:04.051Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:06:04.054Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:06:09.153Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:06:09.310Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:06:09.543Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:06:13.308Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:06:13.322Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:06:13.443Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:06:13.468Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:06:13.736Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:06:22.072Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:06:22.207Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:06:22.251Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:06:22.254Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:06:22.260Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:06:22.679Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:06:23.141Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:06:23.466Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:06:24.928Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:06:24.938Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:06:24.941Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:06:24.943Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:06:27.588Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:07:47.971Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:07:48.150Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:07:48.344Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:07:50.681Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:07:50.691Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:07:50.696Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:07:50.704Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:07:52.851Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:09:07.355Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:09:07.503Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:09:08.809Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:09:20.990Z [Main] [32minfo[39m: GET /api/cards/verify/CARD1763824148671
+2025-11-22T15:09:21.091Z [BlockchainService] [32minfo[39m: Querying: VerifyCard with args: ["CARD1763824148671"]
+2025-11-22T15:09:26.991Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:09:27.088Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:09:27.234Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:09:33.990Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:09:34.366Z [BlockchainService] [31merror[39m: Failed to query VerifyCard:
+2025-11-22T15:09:34.565Z [CardsRoute] [31merror[39m: Error verifying card: Blockchain query failed: Command failed: docker exec cli peer chaincode query -C bpjschannel -n bpjs -c "{\"Args\":[\"VerifyCard\",\"CARD1763824148671\"]}"
+Error: endorsement failure during query. response: status:500 message:"card CARD1763824148671 not found" 
+ {"stack":"Error: Blockchain query failed: Command failed: docker exec cli peer chaincode query -C bpjschannel -n bpjs -c \"{\\\"Args\\\":[\\\"VerifyCard\\\",\\\"CARD1763824148671\\\"]}\"\nError: endorsement failure during query. response: status:500 message:\"card CARD1763824148671 not found\" \n\n    at BlockchainService.query (D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\fabric\\blockchain.service.ts:82:13)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async D:\\Yroo\\Codin\\healthkathon\\bpjs-blockchain-fabric\\api\\src\\routes\\cards.ts:61:20"}
+2025-11-22T15:09:35.768Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:10:26.049Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:10:26.063Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:10:26.065Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:10:26.076Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:10:26.091Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:10:28.531Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:10:28.533Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:10:28.534Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:10:30.497Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:10:30.794Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:10:30.834Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:10:30.862Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:10:30.866Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:10:30.877Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:10:30.893Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:10:30.929Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:10:32.947Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:10:32.959Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:10:32.961Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:10:32.963Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:10:34.678Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:10:34.860Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:10:34.999Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:10:35.999Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:10:36.014Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:10:36.019Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:10:36.020Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:10:38.915Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:10:38.925Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:10:38.927Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:10:38.979Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:10:41.499Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:14:31.019Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:14:31.072Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:14:31.073Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:14:31.358Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:14:31.520Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:14:32.587Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:14:32.591Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:14:32.594Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:14:47.885Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:14:47.889Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:14:48.787Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:14:49.034Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:14:49.072Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:14:49.220Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:14:49.222Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:14:49.303Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:14:49.319Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:14:49.380Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:14:49.386Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:14:49.397Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:14:56.666Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:14:56.699Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:14:56.747Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:14:56.750Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:14:57.264Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:14:57.673Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:15:11.899Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:15:12.530Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:15:12.663Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:15:12.664Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:15:26.150Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:15:28.302Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:16:16.146Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:16:16.150Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:16:16.152Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:16:16.165Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:16:16.365Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:16:17.436Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:16:17.466Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:16:17.478Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:16:23.075Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:16:23.362Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:16:23.479Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:16:23.490Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:16:23.511Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:16:23.518Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:16:23.544Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:16:23.685Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:16:25.824Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:16:25.834Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:16:25.838Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:16:25.841Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:16:27.949Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:16:28.018Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:16:28.577Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:16:29.269Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:17:21.250Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:17:21.500Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:17:21.511Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:17:25.081Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:17:25.115Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:17:25.117Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:17:25.130Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:17:25.315Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:17:41.044Z [Main] [32minfo[39m: GET /api/dashboard/claims
+2025-11-22T15:17:41.060Z [DashboardRoute] [32minfo[39m: Fetching all claims from blockchain...
+2025-11-22T15:17:41.061Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:17:41.601Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:17:41.706Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:17:45.093Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:17:45.097Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:17:45.099Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:17:45.113Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:17:45.229Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:17:45.653Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:17:46.432Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:17:48.254Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:17:50.104Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:17:50.378Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:17:50.505Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:18:51.530Z [Main] [32minfo[39m: GET /api/cards/CARD1
+2025-11-22T15:18:51.547Z [BlockchainService] [32minfo[39m: Querying: VerifyCard with args: ["CARD1"]
+2025-11-22T15:18:54.687Z [BlockchainService] [32minfo[39m: ✅ Query successful: VerifyCard
+2025-11-22T15:18:54.710Z [Main] [32minfo[39m: GET /api/cards/verify/CARD1
+2025-11-22T15:18:54.711Z [BlockchainService] [32minfo[39m: Querying: VerifyCard with args: ["CARD1"]
+2025-11-22T15:18:56.424Z [BlockchainService] [32minfo[39m: ✅ Query successful: VerifyCard
+2025-11-22T15:19:13.940Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:19:14.024Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:19:14.284Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:19:14.483Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:19:14.706Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:19:22.831Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:19:22.851Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:19:23.467Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:19:23.570Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:19:23.701Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:19:24.057Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:19:24.318Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:19:24.604Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:19:29.856Z [Main] [32minfo[39m: GET /api/cards/verify/CARD1
+2025-11-22T15:19:30.189Z [BlockchainService] [32minfo[39m: Querying: VerifyCard with args: ["CARD1"]
+2025-11-22T15:20:14.666Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:20:15.218Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:20:15.268Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:20:18.505Z [BlockchainService] [32minfo[39m: ✅ Query successful: VerifyCard
+2025-11-22T15:20:54.069Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:20:54.114Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:20:54.117Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:20:54.133Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:20:54.216Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:20:58.431Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:20:58.515Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:20:59.250Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:20:59.259Z [Main] [32minfo[39m: GET /api/dashboard/stats
+2025-11-22T15:20:59.278Z [DashboardRoute] [32minfo[39m: Fetching blockchain statistics...
+2025-11-22T15:20:59.280Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:20:59.297Z [BlockchainService] [32minfo[39m: Querying: GetAllVisits with args: []
+2025-11-22T15:20:59.411Z [BlockchainService] [32minfo[39m: Querying: GetAllClaims with args: []
+2025-11-22T15:21:03.281Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllVisits
+2025-11-22T15:21:03.351Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards
+2025-11-22T15:21:03.615Z [Main] [32minfo[39m: GET /api/dashboard/cards
+2025-11-22T15:21:03.720Z [DashboardRoute] [32minfo[39m: Fetching all cards from blockchain...
+2025-11-22T15:21:03.730Z [BlockchainService] [32minfo[39m: Querying: GetAllCards with args: []
+2025-11-22T15:21:04.168Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllClaims
+2025-11-22T15:21:06.783Z [BlockchainService] [32minfo[39m: ✅ Query successful: GetAllCards

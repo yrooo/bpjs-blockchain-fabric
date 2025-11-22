@@ -81,147 +81,161 @@ function CardTest({ addLog }) {
   }
 
   return (
-    <div className="component-container">
-      <h2 className="component-title">💳 BPJS Card Test</h2>
-      
-      <div className="section">
-        <h3 className="section-title">Card Information</h3>
-        
-        <div className="form-group">
-          <label>Card ID</label>
+    <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Card ID</label>
           <input
             type="text"
             name="cardID"
             value={formData.cardID}
             onChange={handleInputChange}
             placeholder="CARD123"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
           />
         </div>
 
-        <div className="form-group">
-          <label>Patient ID</label>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Patient ID</label>
           <input
             type="text"
             name="patientID"
             value={formData.patientID}
             onChange={handleInputChange}
             placeholder="P001"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
           />
         </div>
 
-        <div className="form-group">
-          <label>Patient Name</label>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Patient Name</label>
           <input
             type="text"
             name="patientName"
             value={formData.patientName}
             onChange={handleInputChange}
             placeholder="John Doe"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
           />
         </div>
 
-        <div className="form-group">
-          <label>NIK (National ID)</label>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">NIK (National ID)</label>
           <input
             type="text"
             name="nik"
             value={formData.nik}
             onChange={handleInputChange}
             placeholder="1234567890123456"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
           />
         </div>
 
-        <div className="form-group">
-          <label>Date of Birth</label>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Date of Birth</label>
           <input
             type="date"
             name="dateOfBirth"
             value={formData.dateOfBirth}
             onChange={handleInputChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
           />
         </div>
 
-        <div className="form-group">
-          <label>Gender</label>
-          <select name="gender" value={formData.gender} onChange={handleInputChange}>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Gender</label>
+          <select 
+            name="gender" 
+            value={formData.gender} 
+            onChange={handleInputChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
+          >
             <option value="Male">Male</option>
             <option value="Female">Female</option>
           </select>
         </div>
 
-        <div className="form-group">
-          <label>Address</label>
+        <div className="md:col-span-2">
+          <label className="block text-sm font-medium text-gray-700 mb-1">Address</label>
           <textarea
             name="address"
             value={formData.address}
             onChange={handleInputChange}
             placeholder="Patient address"
+            rows="3"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
           />
         </div>
 
-        <div className="form-group">
-          <label>Card Type</label>
-          <select name="cardType" value={formData.cardType} onChange={handleInputChange}>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Card Type</label>
+          <select 
+            name="cardType" 
+            value={formData.cardType} 
+            onChange={handleInputChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
+          >
             <option value="PBI">PBI (Penerima Bantuan Iuran)</option>
             <option value="Non-PBI">Non-PBI</option>
           </select>
         </div>
 
-        <div className="form-group">
-          <label>Issue Date</label>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Issue Date</label>
           <input
             type="date"
             name="issueDate"
             value={formData.issueDate}
             onChange={handleInputChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
           />
         </div>
 
-        <div className="form-group">
-          <label>Expiry Date</label>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Expiry Date</label>
           <input
             type="date"
             name="expiryDate"
             value={formData.expiryDate}
             onChange={handleInputChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
           />
         </div>
       </div>
 
-      <div className="section">
+      <div className="flex flex-wrap gap-3 mb-6">
         <button 
-          className="btn btn-primary" 
           onClick={issueCard}
           disabled={loading}
-          style={{marginRight: '1rem'}}
+          className="px-4 py-2 bg-bpjs-primary text-white rounded-md hover:bg-bpjs-secondary disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center space-x-2"
         >
-          {loading ? <span className="loading"></span> : '✅'}
-          Issue Card
+          {loading ? <span className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full"></span> : <span>✅</span>}
+          <span>Issue Card</span>
         </button>
         
         <button 
-          className="btn btn-success" 
           onClick={verifyCard}
           disabled={loading}
-          style={{marginRight: '1rem'}}
+          className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center space-x-2"
         >
-          {loading ? <span className="loading"></span> : '🔍'}
-          Verify Card
+          {loading ? <span className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full"></span> : <span>🔍</span>}
+          <span>Verify Card</span>
         </button>
 
         <button 
-          className="btn btn-warning" 
           onClick={generateSampleData}
+          className="px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 transition-colors flex items-center space-x-2"
         >
-          🎲 Generate Sample Data
+          <span>🎲</span>
+          <span>Generate Sample Data</span>
         </button>
       </div>
 
       {result && (
-        <div className="section">
-          <h3 className="section-title">Result</h3>
-          <div className="result-box">
-            <pre>{JSON.stringify(result, null, 2)}</pre>
+        <div className="mt-6">
+          <h3 className="text-lg font-semibold text-gray-800 mb-3">Result</h3>
+          <div className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto">
+            <pre className="text-sm">{JSON.stringify(result, null, 2)}</pre>
           </div>
         </div>
       )}

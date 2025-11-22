@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { RefreshCw, Database, CreditCard, Activity, FileText, BookOpen, Loader2 } from 'lucide-react'
 import { apiService } from '../services/api'
 
 function BlockchainDashboard({ addLog }) {
@@ -121,82 +122,112 @@ function BlockchainDashboard({ addLog }) {
   }
 
   return (
-    <div className="component-container">
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-        <h2 className="component-title">📊 Blockchain Data Dashboard</h2>
+    <div className="space-y-6">
+      <div className="flex justify-between items-center">
+        <div className="flex items-center space-x-3">
+          <Database className="h-6 w-6 text-bpjs-primary" />
+          <h2 className="text-2xl font-bold text-gray-800">Blockchain Data Dashboard</h2>
+        </div>
         <button 
-          className="btn btn-primary" 
           onClick={refreshAll}
           disabled={loading}
+          className="px-4 py-2 bg-bpjs-primary text-white rounded-md hover:bg-bpjs-secondary disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center space-x-2"
         >
-          {loading ? <span className="loading"></span> : '🔄'} Refresh
+          <RefreshCw className={`h-4 w-4 ${loading ? 'animate-spin' : ''}`} />
+          <span>Refresh</span>
         </button>
       </div>
 
       {/* Statistics Overview */}
       {stats && (
-        <div className="section">
-          <h3 className="section-title">Network Statistics</h3>
-          <div className="info-grid">
-            <div className="info-card">
-              <div className="info-card-title">Total Cards</div>
-              <div className="info-card-value" style={{ fontSize: '2rem', color: '#4CAF50' }}>
-                {stats.totalCards}
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
+          <div className="bg-white overflow-hidden shadow rounded-lg">
+            <div className="p-5">
+              <div className="flex items-center">
+                <div className="flex-shrink-0 rounded-md p-3 bg-green-500">
+                  <CreditCard className="h-6 w-6 text-white" />
+                </div>
+                <div className="ml-5 w-0 flex-1">
+                  <dl>
+                    <dt className="text-sm font-medium text-gray-500 truncate">Total Cards</dt>
+                    <dd className="text-3xl font-bold text-gray-900">{stats.totalCards}</dd>
+                    <dd className="text-xs text-gray-500">{stats.activeCards} active</dd>
+                  </dl>
+                </div>
               </div>
-              <small>{stats.activeCards} active</small>
             </div>
-            <div className="info-card">
-              <div className="info-card-title">Total Visits</div>
-              <div className="info-card-value" style={{ fontSize: '2rem', color: '#2196F3' }}>
-                {stats.totalVisits}
+          </div>
+          <div className="bg-white overflow-hidden shadow rounded-lg">
+            <div className="p-5">
+              <div className="flex items-center">
+                <div className="flex-shrink-0 rounded-md p-3 bg-blue-500">
+                  <Activity className="h-6 w-6 text-white" />
+                </div>
+                <div className="ml-5 w-0 flex-1">
+                  <dl>
+                    <dt className="text-sm font-medium text-gray-500 truncate">Total Visits</dt>
+                    <dd className="text-3xl font-bold text-gray-900">{stats.totalVisits}</dd>
+                  </dl>
+                </div>
               </div>
             </div>
-            <div className="info-card">
-              <div className="info-card-title">Total Claims</div>
-              <div className="info-card-value" style={{ fontSize: '2rem', color: '#FF9800' }}>
-                {stats.totalClaims}
+          </div>
+          <div className="bg-white overflow-hidden shadow rounded-lg">
+            <div className="p-5">
+              <div className="flex items-center">
+                <div className="flex-shrink-0 rounded-md p-3 bg-orange-500">
+                  <FileText className="h-6 w-6 text-white" />
+                </div>
+                <div className="ml-5 w-0 flex-1">
+                  <dl>
+                    <dt className="text-sm font-medium text-gray-500 truncate">Total Claims</dt>
+                    <dd className="text-3xl font-bold text-gray-900">{stats.totalClaims}</dd>
+                    <dd className="text-xs text-gray-500">{stats.pendingClaims} pending, {stats.approvedClaims} approved</dd>
+                  </dl>
+                </div>
               </div>
-              <small>{stats.pendingClaims} pending, {stats.approvedClaims} approved</small>
             </div>
           </div>
         </div>
       )}
 
       {/* Patient Search */}
-      <div className="section">
-        <h3 className="section-title">🔍 Search Patient Data</h3>
-        <div style={{ display: 'flex', gap: '1rem', marginBottom: '1rem' }}>
+      <div className="bg-white shadow rounded-lg p-6">
+        <h3 className="text-lg font-medium text-gray-900 mb-4">🔍 Search Patient Data</h3>
+        <div className="flex gap-3 mb-4">
           <input
             type="text"
             placeholder="Enter Patient ID (e.g., P1763807190972)"
             value={searchPatientID}
             onChange={(e) => setSearchPatientID(e.target.value)}
-            style={{ flex: 1 }}
+            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
             onKeyPress={(e) => e.key === 'Enter' && searchPatient()}
           />
           <button 
-            className="btn btn-success" 
             onClick={searchPatient}
             disabled={loading}
+            className="px-4 py-2 bg-bpjs-primary text-white rounded-md hover:bg-bpjs-secondary disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
-            {loading ? <span className="loading"></span> : '🔍'} Search
+            {loading ? <Loader2 className="h-5 w-5 animate-spin" /> : '🔍'} Search
           </button>
         </div>
 
         {patientData && (
-          <div className="result-box" style={{ marginTop: '1rem' }}>
-            <h4>Patient: {patientData.patientID}</h4>
-            <p><strong>Total Visits:</strong> {patientData.totalVisits}</p>
-            <p><strong>Total Claims:</strong> {patientData.totalClaims}</p>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <h4 className="font-semibold text-gray-900 mb-2">Patient: {patientData.patientID}</h4>
+            <p className="text-sm text-gray-700"><strong>Total Visits:</strong> {patientData.totalVisits}</p>
+            <p className="text-sm text-gray-700"><strong>Total Claims:</strong> {patientData.totalClaims}</p>
             
             {patientData.visits.length > 0 && (
-              <div style={{ marginTop: '1rem' }}>
-                <strong>Recent Visits:</strong>
-                {patientData.visits.slice(0, 3).map((visit, idx) => (
-                  <div key={idx} style={{ marginLeft: '1rem', marginTop: '0.5rem' }}>
-                    • {visit.visitDate} - {visit.faskesName} ({visit.diagnosis})
-                  </div>
-                ))}
+              <div className="mt-3">
+                <strong className="text-sm text-gray-900">Recent Visits:</strong>
+                <div className="mt-2 space-y-1">
+                  {patientData.visits.slice(0, 3).map((visit, idx) => (
+                    <div key={idx} className="text-sm text-gray-600 ml-4">
+                      • {visit.visitDate} - {visit.faskesName} ({visit.diagnosis})
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
           </div>
@@ -204,76 +235,101 @@ function BlockchainDashboard({ addLog }) {
       </div>
 
       {/* Data Tabs */}
-      <div className="section">
-        <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
-          <button 
-            className={`btn ${activeTab === 'stats' ? 'btn-primary' : 'btn-secondary'}`}
-            onClick={() => setActiveTab('stats')}
-          >
-            📊 Stats
-          </button>
-          <button 
-            className={`btn ${activeTab === 'cards' ? 'btn-primary' : 'btn-secondary'}`}
-            onClick={() => { setActiveTab('cards'); loadAllCards(); }}
-          >
-            💳 Cards ({stats?.totalCards || 0})
-          </button>
-          <button 
-            className={`btn ${activeTab === 'visits' ? 'btn-primary' : 'btn-secondary'}`}
-            onClick={() => { setActiveTab('visits'); loadAllVisits(); }}
-          >
-            🏥 Visits ({stats?.totalVisits || 0})
-          </button>
-          <button 
-            className={`btn ${activeTab === 'claims' ? 'btn-primary' : 'btn-secondary'}`}
-            onClick={() => { setActiveTab('claims'); loadAllClaims(); }}
-          >
-            💰 Claims ({stats?.totalClaims || 0})
-          </button>
-          <button 
-            className={`btn ${activeTab === 'audit' ? 'btn-primary' : 'btn-secondary'}`}
-            onClick={() => { setActiveTab('audit'); loadAuditLogs(); }}
-          >
-            📜 Audit Logs
-          </button>
+      <div className="bg-white shadow rounded-lg overflow-hidden">
+        <div className="border-b border-gray-200">
+          <div className="flex overflow-x-auto">
+            <button 
+              className={`px-4 py-3 text-sm font-medium border-b-2 whitespace-nowrap ${
+                activeTab === 'stats' 
+                  ? 'border-bpjs-primary text-bpjs-primary bg-bpjs-light' 
+                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+              }`}
+              onClick={() => setActiveTab('stats')}
+            >
+              📊 Stats
+            </button>
+            <button 
+              className={`px-4 py-3 text-sm font-medium border-b-2 whitespace-nowrap ${
+                activeTab === 'cards' 
+                  ? 'border-bpjs-primary text-bpjs-primary bg-bpjs-light' 
+                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+              }`}
+              onClick={() => { setActiveTab('cards'); loadAllCards(); }}
+            >
+              💳 Cards ({stats?.totalCards || 0})
+            </button>
+            <button 
+              className={`px-4 py-3 text-sm font-medium border-b-2 whitespace-nowrap ${
+                activeTab === 'visits' 
+                  ? 'border-bpjs-primary text-bpjs-primary bg-bpjs-light' 
+                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+              }`}
+              onClick={() => { setActiveTab('visits'); loadAllVisits(); }}
+            >
+              🏥 Visits ({stats?.totalVisits || 0})
+            </button>
+            <button 
+              className={`px-4 py-3 text-sm font-medium border-b-2 whitespace-nowrap ${
+                activeTab === 'claims' 
+                  ? 'border-bpjs-primary text-bpjs-primary bg-bpjs-light' 
+                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+              }`}
+              onClick={() => { setActiveTab('claims'); loadAllClaims(); }}
+            >
+              💰 Claims ({stats?.totalClaims || 0})
+            </button>
+            <button 
+              className={`px-4 py-3 text-sm font-medium border-b-2 whitespace-nowrap ${
+                activeTab === 'audit' 
+                  ? 'border-bpjs-primary text-bpjs-primary bg-bpjs-light' 
+                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+              }`}
+              onClick={() => { setActiveTab('audit'); loadAuditLogs(); }}
+            >
+              📜 Audit Logs
+            </button>
+          </div>
         </div>
 
         {/* Cards Data */}
         {activeTab === 'cards' && (
-          <div>
-            <h3 className="section-title">All BPJS Cards ({cards.length})</h3>
+          <div className="p-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">All BPJS Cards ({cards.length})</h3>
             {loading ? (
-              <div style={{ textAlign: 'center', padding: '2rem' }}>
-                <span className="loading"></span> Loading cards...
+              <div className="text-center py-8">
+                <Loader2 className="h-8 w-8 animate-spin mx-auto text-bpjs-primary" />
+                <p className="text-gray-500 mt-2">Loading cards...</p>
               </div>
             ) : cards.length === 0 ? (
-              <p style={{ textAlign: 'center', color: '#888' }}>No cards found</p>
+              <p className="text-center text-gray-500 py-8">No cards found</p>
             ) : (
-              <div style={{ overflowX: 'auto' }}>
-                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-                  <thead>
-                    <tr style={{ backgroundColor: '#1e1e1e', borderBottom: '2px solid #333' }}>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Card ID</th>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Patient Name</th>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>NIK</th>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Type</th>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Status</th>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Issue Date</th>
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Card ID</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Patient Name</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">NIK</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Issue Date</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody className="bg-white divide-y divide-gray-200">
                     {cards.map((card, idx) => (
-                      <tr key={idx} style={{ borderBottom: '1px solid #333' }}>
-                        <td style={{ padding: '0.75rem' }}>{card.cardID}</td>
-                        <td style={{ padding: '0.75rem' }}>{card.patientName}</td>
-                        <td style={{ padding: '0.75rem' }}>{card.nik}</td>
-                        <td style={{ padding: '0.75rem' }}>{card.cardType}</td>
-                        <td style={{ padding: '0.75rem' }}>
-                          <span className={`status-badge ${card.status === 'active' ? 'online' : 'offline'}`}>
+                      <tr key={idx} className="hover:bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{card.cardID}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{card.patientName}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{card.nik}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{card.cardType}</td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
+                            card.status === 'active' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+                          }`}>
                             {card.status}
                           </span>
                         </td>
-                        <td style={{ padding: '0.75rem' }}>{card.issueDate}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{card.issueDate}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -285,36 +341,37 @@ function BlockchainDashboard({ addLog }) {
 
         {/* Visits Data */}
         {activeTab === 'visits' && (
-          <div>
-            <h3 className="section-title">All Patient Visits ({visits.length})</h3>
+          <div className="p-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">All Patient Visits ({visits.length})</h3>
             {loading ? (
-              <div style={{ textAlign: 'center', padding: '2rem' }}>
-                <span className="loading"></span> Loading visits...
+              <div className="text-center py-8">
+                <Loader2 className="h-8 w-8 animate-spin mx-auto text-bpjs-primary" />
+                <p className="text-gray-500 mt-2">Loading visits...</p>
               </div>
             ) : visits.length === 0 ? (
-              <p style={{ textAlign: 'center', color: '#888' }}>No visits found</p>
+              <p className="text-center text-gray-500 py-8">No visits found</p>
             ) : (
-              <div style={{ overflowX: 'auto' }}>
-                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-                  <thead>
-                    <tr style={{ backgroundColor: '#1e1e1e', borderBottom: '2px solid #333' }}>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Visit ID</th>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Patient</th>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Facility</th>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Date</th>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Diagnosis</th>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Doctor</th>
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Visit ID</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Patient</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Facility</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Diagnosis</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Doctor</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody className="bg-white divide-y divide-gray-200">
                     {visits.map((visit, idx) => (
-                      <tr key={idx} style={{ borderBottom: '1px solid #333' }}>
-                        <td style={{ padding: '0.75rem' }}>{visit.visitID}</td>
-                        <td style={{ padding: '0.75rem' }}>{visit.patientName}</td>
-                        <td style={{ padding: '0.75rem' }}>{visit.faskesName}</td>
-                        <td style={{ padding: '0.75rem' }}>{visit.visitDate}</td>
-                        <td style={{ padding: '0.75rem' }}>{visit.diagnosis}</td>
-                        <td style={{ padding: '0.75rem' }}>{visit.doctorName}</td>
+                      <tr key={idx} className="hover:bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{visit.visitID}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{visit.patientName}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{visit.faskesName}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{visit.visitDate}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{visit.diagnosis}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{visit.doctorName}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -323,48 +380,49 @@ function BlockchainDashboard({ addLog }) {
             )}
           </div>
         )}
-
         {/* Claims Data */}
         {activeTab === 'claims' && (
-          <div>
-            <h3 className="section-title">All Insurance Claims ({claims.length})</h3>
+          <div className="p-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">All Insurance Claims ({claims.length})</h3>
             {loading ? (
-              <div style={{ textAlign: 'center', padding: '2rem' }}>
-                <span className="loading"></span> Loading claims...
+              <div className="text-center py-8">
+                <Loader2 className="h-8 w-8 animate-spin mx-auto text-bpjs-primary" />
+                <p className="text-gray-500 mt-2">Loading claims...</p>
               </div>
             ) : claims.length === 0 ? (
-              <p style={{ textAlign: 'center', color: '#888' }}>No claims found</p>
+              <p className="text-center text-gray-500 py-8">No claims found</p>
             ) : (
-              <div style={{ overflowX: 'auto' }}>
-                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-                  <thead>
-                    <tr style={{ backgroundColor: '#1e1e1e', borderBottom: '2px solid #333' }}>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Claim ID</th>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Patient</th>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Facility</th>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Amount</th>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Status</th>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Date</th>
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Claim ID</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Patient</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Facility</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody className="bg-white divide-y divide-gray-200">
                     {claims.map((claim, idx) => (
-                      <tr key={idx} style={{ borderBottom: '1px solid #333' }}>
-                        <td style={{ padding: '0.75rem' }}>{claim.claimID}</td>
-                        <td style={{ padding: '0.75rem' }}>{claim.patientName}</td>
-                        <td style={{ padding: '0.75rem' }}>{claim.faskesName}</td>
-                        <td style={{ padding: '0.75rem' }}>
+                      <tr key={idx} className="hover:bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{claim.claimID}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{claim.patientName}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{claim.faskesName}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-medium">
                           Rp {parseInt(claim.claimAmount || 0).toLocaleString('id-ID')}
                         </td>
-                        <td style={{ padding: '0.75rem' }}>
-                          <span className={`status-badge ${
-                            claim.status === 'approved' ? 'online' : 
-                            claim.status === 'rejected' ? 'offline' : 'warning'
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
+                            claim.status === 'approved' ? 'bg-green-100 text-green-800' : 
+                            claim.status === 'rejected' ? 'bg-red-100 text-red-800' : 
+                            'bg-yellow-100 text-yellow-800'
                           }`}>
                             {claim.status}
                           </span>
                         </td>
-                        <td style={{ padding: '0.75rem' }}>{claim.serviceDate}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{claim.serviceDate}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -372,42 +430,42 @@ function BlockchainDashboard({ addLog }) {
               </div>
             )}
           </div>
-        )}
-
+        )}</div>
         {/* Audit Logs */}
         {activeTab === 'audit' && (
-          <div>
-            <h3 className="section-title">Blockchain Audit Trail ({auditLogs.length})</h3>
+          <div className="p-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Blockchain Audit Trail ({auditLogs.length})</h3>
             {loading ? (
-              <div style={{ textAlign: 'center', padding: '2rem' }}>
-                <span className="loading"></span> Loading audit logs...
+              <div className="text-center py-8">
+                <Loader2 className="h-8 w-8 animate-spin mx-auto text-bpjs-primary" />
+                <p className="text-gray-500 mt-2">Loading audit logs...</p>
               </div>
             ) : auditLogs.length === 0 ? (
-              <p style={{ textAlign: 'center', color: '#888' }}>No audit logs found</p>
+              <p className="text-center text-gray-500 py-8">No audit logs found</p>
             ) : (
-              <div style={{ overflowX: 'auto' }}>
-                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-                  <thead>
-                    <tr style={{ backgroundColor: '#1e1e1e', borderBottom: '2px solid #333' }}>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Timestamp</th>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Action</th>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Actor</th>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Entity Type</th>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Entity ID</th>
-                      <th style={{ padding: '0.75rem', textAlign: 'left' }}>Details</th>
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Timestamp</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actor</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Entity Type</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Entity ID</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Details</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody className="bg-white divide-y divide-gray-200">
                     {auditLogs.map((log, idx) => (
-                      <tr key={idx} style={{ borderBottom: '1px solid #333' }}>
-                        <td style={{ padding: '0.75rem' }}>
+                      <tr key={idx} className="hover:bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           {new Date(log.timestamp).toLocaleString('id-ID')}
                         </td>
-                        <td style={{ padding: '0.75rem' }}>{log.action}</td>
-                        <td style={{ padding: '0.75rem' }}>{log.actor}</td>
-                        <td style={{ padding: '0.75rem' }}>{log.entityType}</td>
-                        <td style={{ padding: '0.75rem' }}>{log.entityID}</td>
-                        <td style={{ padding: '0.75rem' }}>{log.details}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{log.action}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{log.actor}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{log.entityType}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 font-mono">{log.entityID}</td>
+                        <td className="px-6 py-4 text-sm text-gray-500">{log.details}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -420,5 +478,7 @@ function BlockchainDashboard({ addLog }) {
     </div>
   )
 }
+
+export default BlockchainDashboard
 
 export default BlockchainDashboard

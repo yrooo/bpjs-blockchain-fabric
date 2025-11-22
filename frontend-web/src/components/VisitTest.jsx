@@ -92,182 +92,201 @@ function VisitTest({ addLog }) {
   }
 
   return (
-    <div className="component-container">
-      <h2 className="component-title">🏥 Patient Visit Test</h2>
-      
-      <div className="section">
-        <h3 className="section-title">Visit Information</h3>
-        
-        <div className="form-group">
-          <label>Visit ID</label>
+    <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Visit ID</label>
           <input
             type="text"
             name="visitID"
             value={formData.visitID}
             onChange={handleInputChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
           />
         </div>
 
-        <div className="form-group">
-          <label>Card ID</label>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Card ID</label>
           <input
             type="text"
             name="cardID"
             value={formData.cardID}
             onChange={handleInputChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
           />
         </div>
 
-        <div className="form-group">
-          <label>Patient ID</label>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Patient ID</label>
           <input
             type="text"
             name="patientID"
             value={formData.patientID}
             onChange={handleInputChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
           />
         </div>
 
-        <div className="form-group">
-          <label>Patient Name</label>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Patient Name</label>
           <input
             type="text"
             name="patientName"
             value={formData.patientName}
             onChange={handleInputChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
           />
         </div>
 
-        <div className="form-group">
-          <label>Facility Code</label>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Facility Code</label>
           <input
             type="text"
             name="faskesCode"
             value={formData.faskesCode}
             onChange={handleInputChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
           />
         </div>
 
-        <div className="form-group">
-          <label>Facility Name</label>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Facility Name</label>
           <input
             type="text"
             name="faskesName"
             value={formData.faskesName}
             onChange={handleInputChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
           />
         </div>
 
-        <div className="form-group">
-          <label>Facility Type</label>
-          <select name="faskesType" value={formData.faskesType} onChange={handleInputChange}>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Facility Type</label>
+          <select 
+            name="faskesType" 
+            value={formData.faskesType} 
+            onChange={handleInputChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
+          >
             <option value="puskesmas">Puskesmas (Clinic)</option>
             <option value="rumahsakit">Rumah Sakit (Hospital)</option>
           </select>
         </div>
 
-        <div className="form-group">
-          <label>Visit Date</label>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Visit Date</label>
           <input
             type="date"
             name="visitDate"
             value={formData.visitDate}
             onChange={handleInputChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
           />
         </div>
 
-        <div className="form-group">
-          <label>Visit Type</label>
-          <select name="visitType" value={formData.visitType} onChange={handleInputChange}>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Visit Type</label>
+          <select 
+            name="visitType" 
+            value={formData.visitType} 
+            onChange={handleInputChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
+          >
             <option value="outpatient">Outpatient (Rawat Jalan)</option>
             <option value="inpatient">Inpatient (Rawat Inap)</option>
             <option value="emergency">Emergency (IGD)</option>
           </select>
         </div>
 
-        <div className="form-group">
-          <label>Diagnosis</label>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Diagnosis</label>
           <input
             type="text"
             name="diagnosis"
             value={formData.diagnosis}
             onChange={handleInputChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
           />
         </div>
 
-        <div className="form-group">
-          <label>Treatment</label>
+        <div className="md:col-span-2">
+          <label className="block text-sm font-medium text-gray-700 mb-1">Treatment</label>
           <textarea
             name="treatment"
             value={formData.treatment}
             onChange={handleInputChange}
+            rows="3"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
           />
         </div>
 
-        <div className="form-group">
-          <label>Doctor Name</label>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Doctor Name</label>
           <input
             type="text"
             name="doctorName"
             value={formData.doctorName}
             onChange={handleInputChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
           />
         </div>
 
-        <div className="form-group">
-          <label>Doctor ID</label>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Doctor ID</label>
           <input
             type="text"
             name="doctorID"
             value={formData.doctorID}
             onChange={handleInputChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
           />
         </div>
 
-        <div className="form-group">
-          <label>Notes</label>
+        <div className="md:col-span-2">
+          <label className="block text-sm font-medium text-gray-700 mb-1">Notes</label>
           <textarea
             name="notes"
             value={formData.notes}
             onChange={handleInputChange}
+            rows="3"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bpjs-primary focus:border-transparent"
           />
         </div>
       </div>
 
-      <div className="section">
+      <div className="flex flex-wrap gap-3 mb-6">
         <button 
-          className="btn btn-primary" 
           onClick={recordVisit}
           disabled={loading}
-          style={{marginRight: '1rem'}}
+          className="px-4 py-2 bg-bpjs-primary text-white rounded-md hover:bg-bpjs-secondary disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center space-x-2"
         >
-          {loading ? <span className="loading"></span> : '📝'}
-          Record Visit
+          {loading ? <span className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full"></span> : <span>📝</span>}
+          <span>Record Visit</span>
         </button>
         
         <button 
-          className="btn btn-success" 
           onClick={getPatientHistory}
           disabled={loading}
-          style={{marginRight: '1rem'}}
+          className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center space-x-2"
         >
-          {loading ? <span className="loading"></span> : '📋'}
-          Get Patient History
+          {loading ? <span className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full"></span> : <span>📋</span>}
+          <span>Get Patient History</span>
         </button>
 
         <button 
-          className="btn btn-warning" 
           onClick={generateSampleData}
+          className="px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 transition-colors flex items-center space-x-2"
         >
-          🎲 Generate Sample Data
+          <span>🎲</span>
+          <span>Generate Sample Data</span>
         </button>
       </div>
 
       {result && (
-        <div className="section">
-          <h3 className="section-title">Result</h3>
-          <div className="result-box">
-            <pre>{JSON.stringify(result, null, 2)}</pre>
+        <div className="mt-6">
+          <h3 className="text-lg font-semibold text-gray-800 mb-3">Result</h3>
+          <div className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto">
+            <pre className="text-sm">{JSON.stringify(result, null, 2)}</pre>
           </div>
         </div>
       )}
